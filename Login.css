@@ -142,3 +142,19 @@ body
         width: 15rem;
     }
 }
+@media screen and (max-width : 400px)
+{
+    .admin-or-officer
+    {
+        margin-top: 2rem;
+    }
+    .form-container div form .input-cont
+    {
+        width: 80%;
+        padding: 0.8rem;
+    }
+    .login-btn
+    {
+        width: 90%;
+    }
+}
