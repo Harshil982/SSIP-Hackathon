@@ -147,14 +147,19 @@ body
     .admin-or-officer
     {
         margin-top: 2rem;
+        margin-bottom: 2rem;
     }
     .form-container div form .input-cont
     {
-        width: 80%;
+        width: 90%;
         padding: 0.8rem;
+    }
+    .form-container div
+    {
+        margin: 0;
     }
     .login-btn
     {
-        width: 90%;
+        width: 100%;
     }
 }
