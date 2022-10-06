@@ -18,6 +18,7 @@ overflow-x: hidden;
 {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .analytics-flex-container .map-container
 {
@@ -41,6 +42,30 @@ overflow-x: hidden;
     left: 0;
     background-color: rgba(0, 0, 0, 0.24);
     color: white;
+    transform: scale(1,1);
+    /* transition: transform 200ms; */
+    margin-top: 4.5rem;
+}
+.district-links-container
+{
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    padding-top: 1rem;
+}
+.district-link
+{
+    text-decoration: none;
+    /* color: white; */
+    width: 15rem;
+    padding: 1rem;
+    text-align: center;
+    /* border: 1px solid white; */
+    color: black;
+    margin-top: 3rem;
+    margin-left: 1rem;
+    background-color: rgba(255, 255, 255, 0.452);
+    border-radius: 0.5rem;
 }
 .display-none
 {
@@ -65,6 +90,7 @@ overflow-x: hidden;
 {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
 }
 .last-updated
@@ -84,4 +110,84 @@ overflow-x: hidden;
 {
     font-weight: 500;
     font-size: 1.3rem;
+}
+.slick-prev::before,.slick-next::before
+{
+    color: dodgerblue !important;
+}
+.slick-next
+{
+    right: 0rem !important;
+    font-size: 3rem;
+}
+.case-card
+{
+    margin-right: 1.9rem;
+    text-align: center;
+    height: 15rem !important;
+    border-radius: 1rem;
+}
+.case-card .case-type
+{
+    margin-top: 5rem;
+    font-weight: 900;
+}
+.case-card p:last-child
+{
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+.gal-slider
+{
+    margin-right: 2rem;
+    margin-top: 2rem;
+}
+.first,.fifth
+{
+    background-color: #d9443f2f;
+    color: #d9433f;
+}
+.second,.sixth
+{
+    background-color: rgba(0, 132, 255, 0.212);
+    color: rgb(0, 132, 255);
+}
+.third,.seventh
+{
+    background-color: rgba(0, 128, 0, 0.212);
+    color: green;
+}
+.fourth,.eighth
+{
+    background-color: rgba(255, 166, 0, 0.212);
+    color: orange;
+}
+.close-popup
+{
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    cursor: pointer;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.452);
+    border-radius: 50%;
+    height: 2.3rem;
+    width: 2.3rem;
+    text-align: center;
+}
+@media screen and (max-width : 768px) 
+{
+    .analytics-flex-container
+    {
+        flex-direction: column;
+    }
+    .analytics-flex-container .map-container
+    {
+        width: 100%;
+    }    
+    .analytics-flex-container .all-analytics-container
+    {
+        margin: auto;
+        width: 80%;
+    }
 }

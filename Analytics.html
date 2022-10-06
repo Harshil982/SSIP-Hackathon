@@ -14,8 +14,12 @@
   <link rel="shortcut icon" href="./Images/Images/fav.png" type="image/x-icon">
   <!-- Boxicons CSS -->
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+    integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+    integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -79,7 +83,7 @@
   <div class="Analytics-container" id="Analytics-container">
     <div class="analytics-flex-container">
       <div class="map-container">
-        <img src="./Images/GujMap.png" id="gujmap" alt="">
+        <img src="./Images/GujMap.png" title="Click here to view district wise analysis" id="gujmap" alt="">
       </div>
       <div class="all-analytics-container">
         <div class="state-and-total-cases">
@@ -94,17 +98,37 @@
         </div>
         <!-- Slider Starts Here -->
         <div class="gal-slider">
-          <div>
-            <h1>Hello First</h1>
+          <div class="case-card first">
+            <p class="case-type">Murder</p>
+            <p>8,45,345</p>
           </div>
-          <div>
-            <h1>Hello Second</h1>
+          <div class="case-card second">
+            <p class="case-type">Rape</p>
+            <p>8,45,345</p>
           </div>
-          <div>
-            <h1>Hello third</h1>
+          <div class="case-card third">
+            <p class="case-type">Kidnapping</p>
+            <p>8,45,345</p>
           </div>
-          <div>
-            <h1>Hello fourth</h1>
+          <div class="case-card fourth">
+            <p class="case-type">Acid Attack</p>
+            <p>8,45,345</p>
+          </div>
+          <div class="case-card fifth">
+            <p class="case-type">Dowry</p>
+            <p>8,45,345</p>
+          </div>
+          <div class="case-card sixth">
+            <p class="case-type">Domestic Violence</p>
+            <p>8,45,345</p>
+          </div>
+          <div class="case-card seventh">
+            <p class="case-type">Girl Trafficking</p>
+            <p>8,45,345</p>
+          </div>
+          <div class="case-card eighth">
+            <p class="case-type">Cyber Crime</p>
+            <p>8,45,345</p>
           </div>
         </div>
         <!-- Slider Ends Here -->
@@ -114,23 +138,54 @@
   <!-- Analytics Container ends -->
   <!-- District Popup Starts -->
   <div class="display-none" id="dist-popup">
-    <p>Aravalli</p>
-    <p>Aravalli</p>
-    <p>Aravalli</p>
-    <p>Aravalli</p>
-    <p>Aravalli</p>
-    <p>Aravalli</p>
-    <p>Aravalli</p>
-    <p>Aravalli</p>
-    <p>Aravalli</p>
-    <h1 id="close">Close</h1>
+    <div class="district-links-container">
+      <a href="" class="district-link">Ahmedabad</a>
+      <a href="" class="district-link">Amreli</a>
+      <a href="" class="district-link">Anand</a>
+      <a href="" class="district-link">Aravalli</a>
+      <a href="" class="district-link">Banaskantha</a>
+      <a href="" class="district-link">Bharuch</a>
+      <a href="" class="district-link">Bhavnagar</a>
+      <a href="" class="district-link">Botad</a>
+      <a href="" class="district-link">Chhota Udepur</a>
+      <a href="" class="district-link">Dahod</a>
+      <a href="" class="district-link">Dang</a>
+      <a href="" class="district-link">DevBhoomi Dwarka</a>
+      <a href="" class="district-link">Gandhinagar</a>
+      <a href="" class="district-link">Gir Somnath</a>
+      <a href="" class="district-link">Jamnagar</a>
+      <a href="" class="district-link">Junagadh</a>
+      <a href="" class="district-link">Kutch</a>
+      <a href="" class="district-link">Kheda</a>
+      <a href="" class="district-link">Mahisagar</a>
+      <a href="" class="district-link">Mehsana</a>
+      <a href="" class="district-link">Morbi</a>
+      <a href="" class="district-link">Narmada</a>
+      <a href="" class="district-link">Navsari</a>
+      <a href="" class="district-link">Panchmahal</a>
+      <a href="" class="district-link">Patan</a>
+      <a href="" class="district-link">Porbandar</a>
+      <a href="" class="district-link">Rajkot</a>
+      <a href="" class="district-link">Sabarkantha</a>
+      <a href="" class="district-link">Surat</a>
+      <a href="" class="district-link">Surendranagar</a>
+      <a href="" class="district-link">Tapi</a>
+      <a href="" class="district-link">Vadodara</a>
+      <a href="" class="district-link">Valsad</a>
+      <h1 id="close" class="close-popup">
+        <ion-icon name="close-outline"></ion-icon>
+      </h1>
+    </div>
   </div>
   <!-- District Popup Ends -->
 </body>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+  integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
   const navBar = document.querySelector("nav"),
@@ -163,10 +218,36 @@
     navBar.classList.remove("open");
   });
   $('.gal-slider').slick({
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 3
-});
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+  });
 </script>
 
 </html>
