@@ -21,7 +21,7 @@
   <nav>
     <div class="logo">
       <i class="bx bx-menu menu-icon"></i>
-      <span class="logo-name">SSIP</span>
+      <span class="logo-name">Analytics</span>
     </div>
 
     <div class="sidebar">
@@ -40,13 +40,13 @@
           </li>
           <li class="list">
             <a href="./Revenue.html" class="nav-link">
-              <ion-icon name="book-outline" class="icon" ></ion-icon>
+              <ion-icon name="book-outline" class="icon"></ion-icon>
               <span class="link">Crime Records</span>
             </a>
           </li>
           <li class="list">
             <a href="./Notification.html" class="nav-link">
-              <ion-icon name="analytics-outline" class="icon" ></ion-icon>
+              <ion-icon name="analytics-outline" class="icon"></ion-icon>
               <span class="link">Trends</span>
             </a>
           </li>
@@ -73,29 +73,90 @@
   <!-- SideNavbar part ends -->
 
   <section class="overlay"></section>
-
-  <div class="Analytics-container" >
-    <h1 class="title" >Analytics</h1>
-    <div>
-
+  <!-- Analytics Container Starts -->
+  <div class="Analytics-container" id="Analytics-container">
+    <div class="analytics-flex-container">
+      <div class="map-container">
+        <img src="./Images/GujMap.png" id="gujmap" alt="">
+      </div>
+      <div class="all-analytics-container">
+        <div class="state-and-total-cases">
+          <div>
+            <h1 class="State-title">Gujarat</h1>
+            <p class="last-updated">Last Updated on 6 Oct 2022, 22:36 PM IST</p>
+          </div>
+          <div class="Total-case-container">
+            <p class="total-case-title">Total Cases</p>
+            <p>3,09,454,234</p>
+          </div>
+        </div>
+        <!-- Slider Starts Here -->
+        <div class="gallery-slider">
+          <div>
+            <h1>Hello First</h1>
+          </div>
+          <div>
+            <h1>Hello Second</h1>
+          </div>
+          <div>
+            <h1>Hello third</h1>
+          </div>
+          <div>
+            <h1>Hello fourth</h1>
+          </div>
+        </div>
+        <!-- Slider Ends Here -->
+      </div>
     </div>
   </div>
-  <script>
-    const navBar = document.querySelector("nav"),
-      menuBtns = document.querySelectorAll(".menu-icon"),
-      overlay = document.querySelector(".overlay");
-
-    menuBtns.forEach((menuBtn) => {
-      menuBtn.addEventListener("click", () => {
-        navBar.classList.toggle("open");
-      });
-    });
-
-    overlay.addEventListener("click", () => {
-      navBar.classList.remove("open");
-    });
-  </script>
+  <!-- Analytics Container ends -->
+  <!-- District Popup Starts -->
+  <div class="display-none" id="dist-popup">
+    <p>Aravalli</p>
+    <p>Aravalli</p>
+    <p>Aravalli</p>
+    <p>Aravalli</p>
+    <p>Aravalli</p>
+    <p>Aravalli</p>
+    <p>Aravalli</p>
+    <p>Aravalli</p>
+    <p>Aravalli</p>
+    <h1 id="close">Close</h1>
+  </div>
+  <!-- District Popup Ends -->
 </body>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+  const navBar = document.querySelector("nav"),
+    menuBtns = document.querySelectorAll(".menu-icon"),
+    overlay = document.querySelector(".overlay");
+
+  const map = document.getElementById("gujmap");
+  const popup = document.getElementById("dist-popup");
+  const closeBtn = document.getElementById("close");
+  const anaCont = document.getElementById("Analytics-container");
+
+  map.addEventListener("click", () => {
+    popup.classList.remove("display-none");
+    popup.classList.add("district-popup");
+    anaCont.classList.add("blur");
+  })
+
+  closeBtn.addEventListener("click", () => {
+    popup.classList.add("display-none");
+    anaCont.classList.remove("blur");
+  })
+
+  menuBtns.forEach((menuBtn) => {
+    menuBtn.addEventListener("click", () => {
+      navBar.classList.toggle("open");
+    });
+  });
+
+  overlay.addEventListener("click", () => {
+    navBar.classList.remove("open");
+  });
+</script>
+
 </html>

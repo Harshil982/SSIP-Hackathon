@@ -1,8 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800;900&family=Questrial&family=Roboto:wght@500&display=swap');
+body
+{
+    font-family: 'Nunito Sans', sans-serif;
+font-family: 'Questrial', sans-serif;
+font-family: 'Roboto', sans-serif;
+}
 .Analytics-container
 {
-    margin-top: 5rem;
+    margin-top: 6rem;
 }
 .Analytics-container .title
 {
     margin-left: 1.5rem;
+}
+.analytics-flex-container
+{
+    display: flex;
+    justify-content: space-between;
+}
+.analytics-flex-container .map-container
+{
+    width: 38%;
+}
+.analytics-flex-container .map-container img
+{
+    width: 90%;
+    margin: auto;
+}
+.analytics-flex-container .all-analytics-container
+{
+    width: 60%;
+}
+.district-popup
+{
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.24);
+    color: white;
+}
+.display-none
+{
+    transform: scale(0,0);
+}
+.blur
+{
+    filter: blur(20px);
+}
+.State-title
+{
+    color: #d9433f;
+    background-color: #d9443f33;
+    /* background-color: white; */
+    width: 7rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    /* padding: 0.5rem; */
+}
+.state-and-total-cases
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.last-updated
+{
+    font-size: 0.8rem;
+    margin-left: 0.2rem;
+    margin-top: 5px;
+}
+.Total-case-container
+{
+    /* background-color: rgba(255, 0, 0, 0.26); */
+    /* padding: 0.9rem; */
+    /* border-radius: 1rem; */
+    margin-right: 2rem;
+}
+.total-case-title
+{
+    font-weight: 500;
+    font-size: 1.3rem;
 }
