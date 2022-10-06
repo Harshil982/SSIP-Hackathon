@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analytics</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/Analytics.css" />
+  <link rel="shortcut icon" href="./Images/Images/fav.png" type="image/x-icon">
+  <!-- Boxicons CSS -->
+  <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Side Navigation Bar Starts -->
+  <nav>
+    <div class="logo">
+      <i class="bx bx-menu menu-icon"></i>
+      <span class="logo-name">SSIP</span>
+    </div>
+
+    <div class="sidebar">
+      <div class="logo">
+        <i class="bx bx-menu menu-icon"></i>
+        <span class="logo-name">SSIP</span>
+      </div>
+
+      <div class="sidebar-content">
+        <ul class="lists">
+          <li class="list">
+            <a href="./index.html" class="nav-link nav-link-active">
+              <i class="bx bx-pie-chart-alt-2 icon icon-active"></i>
+              <span class="link icon-active">Analytics</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="./Revenue.html" class="nav-link">
+              <ion-icon name="book-outline" class="icon" ></ion-icon>
+              <span class="link">Crime Records</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="./Notification.html" class="nav-link">
+              <ion-icon name="analytics-outline" class="icon" ></ion-icon>
+              <span class="link">Trends</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="#" class="nav-link">
+              <i class="bx bx-message-rounded icon"></i>
+              <span class="link">Suggestions</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="bottom-cotent">
+          <li class="list">
+            <a href="#" class="nav-link">
+              <i class="bx bx-log-out icon"></i>
+              <span class="link">Logout</span>
+            </a>
+          </li>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SideNavbar part ends -->
+
+  <section class="overlay"></section>
+
+  <div class="Analytics-container" >
+    <h1 class="title" >Analytics</h1>
+    <div>
+
+    </div>
+  </div>
+  <script>
+    const navBar = document.querySelector("nav"),
+      menuBtns = document.querySelectorAll(".menu-icon"),
+      overlay = document.querySelector(".overlay");
+
+    menuBtns.forEach((menuBtn) => {
+      menuBtn.addEventListener("click", () => {
+        navBar.classList.toggle("open");
+      });
+    });
+
+    overlay.addEventListener("click", () => {
+      navBar.classList.remove("open");
+    });
+  </script>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</html>
