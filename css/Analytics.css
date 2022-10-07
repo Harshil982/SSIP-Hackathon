@@ -19,6 +19,8 @@ overflow-x: hidden;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: center;
+    margin: 1.5rem 0;
 }
 .analytics-flex-container .map-container
 {
@@ -66,6 +68,7 @@ overflow-x: hidden;
     margin-left: 1rem;
     background-color: rgba(255, 255, 255, 0.452);
     border-radius: 0.5rem;
+    transition: 500ms;
 }
 .display-none
 {
@@ -80,7 +83,7 @@ overflow-x: hidden;
     color: #d9433f;
     background-color: #d9443f33;
     /* background-color: white; */
-    width: 7rem;
+    /* width: 7rem; */
     text-align: center;
     border-radius: 0.5rem;
     font-size: 1.5rem;
@@ -175,27 +178,19 @@ overflow-x: hidden;
     width: 2.3rem;
     text-align: center;
 }
-@media screen and (max-width : 768px) 
+.doughnut-main-cont
 {
-    .analytics-flex-container
-    {
-        flex-direction: column;
-    }
-    .analytics-flex-container .map-container
-    {
-        width: 100%;
-    }    
-    .analytics-flex-container .all-analytics-container
-    {
-        margin: auto;
-        width: 80%;
-    }
+    width: 38%;
 }
 .doughnut-chart-cont
 {
     width: 80%;
     margin: auto;
     height: 22rem;
+}
+.line-chart-main-cont
+{
+    width: 50%;
 }
 .line-chart-cont
 {
@@ -205,6 +200,7 @@ overflow-x: hidden;
 }
 .Top-districts-container
 {
+    width: 60%;
     margin-top: 1.3rem;
 }
 .Top-districts-container .top-title
@@ -244,9 +240,75 @@ overflow-x: hidden;
 .district-data-and-graph
 {
     display: flex;
+    flex-wrap: wrap;
 }
 .bar-chart-cont
 {
     margin-left: 3rem;
-    width: 36rem;
+    width: 65%;
+}
+.active-district
+{
+    background-color: #4c3a51a2;
+    color: white;
+    /* border: 5px solid white; */
+}
+.district-link:hover
+{
+    transform: translateY(-10px);
+    background-color: #FFF6BF;;
+}
+.Hori-bar-chart-main-cont
+{
+    width: 50%;
+}
+.horizon-bar-chart
+{
+    width: 96.5%;
+}
+@media screen and (max-width : 768px) 
+{
+    .analytics-flex-container
+    {
+        flex-direction: column;
+    }
+    .analytics-flex-container .map-container
+    {
+        width: 100%;
+    }    
+    .analytics-flex-container .all-analytics-container
+    {
+        margin: auto;
+        width: 80%;
+    }
+    .doughnut-main-cont
+    {
+        margin: 3rem auto;
+        width: 85%;
+    }
+    .doughnut-chart-cont
+    {
+        width: 100%;
+    }
+    .Top-districts-container
+    {
+        width: 85%;
+        margin: 2rem auto;
+    }
+    .bar-chart-cont
+    {
+        margin-left: 0;
+        width: 100%;
+        margin: 2rem 0 2rem 0;
+    }
+    .Hori-bar-chart-main-cont
+    {
+        width: 85%;
+        margin: 0rem auto;
+    }
+    .line-chart-main-cont
+    {
+        width: 85%;
+        margin: 1rem auto;
+    }
 }
