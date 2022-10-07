@@ -57,7 +57,7 @@ overflow-x: hidden;
 {
     text-decoration: none;
     /* color: white; */
-    width: 15rem;
+    width: 14.5rem;
     padding: 1rem;
     text-align: center;
     /* border: 1px solid white; */
@@ -190,4 +190,63 @@ overflow-x: hidden;
         margin: auto;
         width: 80%;
     }
+}
+.doughnut-chart-cont
+{
+    width: 80%;
+    margin: auto;
+    height: 22rem;
+}
+.line-chart-cont
+{
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+}
+.Top-districts-container
+{
+    margin-top: 1.3rem;
+}
+.Top-districts-container .top-title
+{
+    font-size: 1.5rem;
+}
+.district-data
+{
+    margin-top: 1rem;
+}
+.district-data p
+{
+    margin-top: 1.3rem;
+}
+.district-data p:first-child
+{
+    margin-top: 0;
+}
+.district-data .case-count
+{
+    font-size: 1.4rem;
+    margin-right: 0.5rem;
+    color: gray;
+}
+.district-data .city-name
+{
+    margin-right: 0.5rem;
+}
+.district-data .incre-change
+{
+    color: green;
+}
+.district-data .decre-change
+{
+    color: red;
+}
+.district-data-and-graph
+{
+    display: flex;
+}
+.bar-chart-cont
+{
+    margin-left: 3rem;
+    width: 36rem;
 }

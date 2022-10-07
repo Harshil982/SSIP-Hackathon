@@ -10,6 +10,8 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="./css/style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link rel="stylesheet" href="./css/Analytics.css" />
   <link rel="shortcut icon" href="./Images/Images/fav.png" type="image/x-icon">
   <!-- Boxicons CSS -->
@@ -20,6 +22,36 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
     integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Chart Script Starts -->
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", { packages: ["corechart"] });
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['Kidnapping', 10],
+        ['Rape', 22],
+        ['Murder', 8],
+        ['Cybercrime', 30],
+        ['Acid Attack', 3],
+        ['Dowry', 5],
+        ['Domestic Violence', 10],
+        ['Child Trafficking', 12],
+      ]);
+
+      var options = {
+        // tooltip : {textStyle: {color: '#FF0000'}, showColorCode: true},
+        pieHole: 0.4,
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+      chart.draw(data, options);
+    }
+  </script>
+  <!-- Chart Script Ends -->
 </head>
 
 <body>
@@ -39,7 +71,7 @@
       <div class="sidebar-content">
         <ul class="lists">
           <li class="list">
-            <a href="./index.html" class="nav-link nav-link-active">
+            <a href="./Analytics.html" class="nav-link nav-link-active">
               <i class="bx bx-pie-chart-alt-2 icon icon-active"></i>
               <span class="link icon-active">Analytics</span>
             </a>
@@ -84,6 +116,13 @@
     <div class="analytics-flex-container">
       <div class="map-container">
         <img src="./Images/GujMap.png" title="Click here to view district wise analysis" id="gujmap" alt="">
+        <!-- <div id="donutchart" class="donught-chart"></div> -->
+        <div class="doughnut-chart-cont">
+          <canvas id="myChart" class="doughnut-chart"></canvas>
+        </div>
+        <div class="line-chart-cont">
+          <canvas id="lineChart" class="line-chart"></canvas>
+        </div>
       </div>
       <div class="all-analytics-container">
         <div class="state-and-total-cases">
@@ -132,6 +171,35 @@
           </div>
         </div>
         <!-- Slider Ends Here -->
+
+        <!-- Top Districts starts -->
+        <div class="Top-districts-container">
+          <p class="top-title">Top districts</p>
+          <div class="district-data-and-graph" >
+            <div class="district-data">
+              <p><span class="case-count">2,47,724</span><span class="city-name">Ahmedabad</span><span
+                  class="incre-change">
+                  <ion-icon name="arrow-up-outline"></ion-icon>2
+                </span></p>
+              <p><span class="case-count">1,33,724</span><span class="city-name">Surat</span><span class="incre-change">
+                  <ion-icon name="arrow-up-outline"></ion-icon>3
+                </span></p>
+              <p><span class="case-count">47,354</span><span class="city-name">Rajkot</span><span class="incre-change">
+                  <ion-icon name="arrow-up-outline"></ion-icon>5
+                </span></p>
+              <p><span class="case-count">27,724</span><span class="city-name">Botad</span><span class="incre-change">
+                  <ion-icon name="arrow-up-outline"></ion-icon>7
+                </span></p>
+              <p><span class="case-count">8,724</span><span class="city-name">Jamnagar</span><span class="incre-change">
+                  <ion-icon name="arrow-up-outline"></ion-icon>8
+                </span></p>
+            </div>
+            <div class="bar-chart-cont">
+              <canvas id="barChart" class="line-chart"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- Top Districts ends -->
       </div>
     </div>
   </div>
@@ -186,6 +254,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
   integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
 <script>
   const navBar = document.querySelector("nav"),
@@ -223,31 +293,136 @@
     slidesToScroll: 1,
     autoplay: true,
     responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
       }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-  ]
+    ]
   });
 </script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<!-- Chart JS Script starts -->
+
+<script>
+  const ctx = document.getElementById('myChart').getContext('2d');
+  const ctxLine = document.getElementById('lineChart').getContext('2d');
+  const ctxBar = document.getElementById('barChart').getContext('2d');
+  const myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Murder', 'Dowry', 'Acid Attack', 'Domestic Violence', 'kidnapping', 'Rape', 'cyber crime', 'Girl Trafficking'],
+      datasets: [{
+        label: 'Votes',
+        data: [12, 2, 18, 5, 9, 32, 20, 11],
+        backgroundColor: [
+          '#38E54D',
+          '#47B5FF',
+          '#ff4a4a',
+          '#e9dac1',
+          '#109618',
+          '#990099',
+          '#8479e1',
+          '#ffadf0',
+        ],
+        borderColor: [
+          '#38E54D',
+          '#47B5FF',
+          '#ff4a4a',
+          '#e9dac1',
+          '#109618',
+          '#990099',
+          '#8479e1',
+          '#ffadf0',
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      maintainAspectRatio: false,
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      },
+      plugins: {
+        title: {
+          display: false,
+        },
+        subtitle: {
+          display: true,
+          text: 'Crime Type vs Number of Cases'
+        }
+      }
+    }
+  });
+  const myChart2 = new Chart(ctxLine, {
+    type: 'line',
+    data: {
+      labels: ['2015', '2016', '2017', '2018', '2019', '2020'],
+      datasets: [{
+        label: 'Total Crimes',
+        data: [10000, 15000, 12345, 32123, 8756, 34000],
+        fill: false,
+        borderColor: 'rgb(75, 192, 192)',
+        tension: 0.3
+      }]
+    }
+  });
+  const myChart3 = new Chart(ctxBar, {
+    type: 'bar',
+    data: {
+      labels: ['Ahmedabad', 'Surat', 'Rajkot', 'Gandhinagar', 'Amreli'],
+      datasets: [{
+        label: 'Total Crimes',
+        data: [120432, 87435, 65487, 55321, 45679],
+        backgroundColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)'
+        ],
+        borderColor: [
+          'rgba(255, 99, 132, 1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)',
+          'rgba(255, 159, 64, 1)'
+        ],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+<!-- Chart JS Script starts -->
 
 </html>
