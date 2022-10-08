@@ -266,6 +266,18 @@ overflow-x: hidden;
 {
     width: 96.5%;
 }
+.sbkantha
+{
+    width: 50% !important;
+    margin: auto;
+    margin-left: calc(50% - 25%) !important;
+}
+.porbandar
+{
+    width: 70% !important;
+    margin: auto;
+    margin-left: 5rem !important;
+}
 @media screen and (max-width : 768px) 
 {
     .analytics-flex-container
