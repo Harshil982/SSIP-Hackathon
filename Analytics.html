@@ -114,26 +114,34 @@
             <p>8,45,345</p>
           </div>
           <div class="case-card third" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="700" >
-            <p class="case-type">Kidnapping</p>
-            <p>8,45,345</p>
-          </div>
-          <div class="case-card fourth" data-aos="zoom-in" data-aos-delay="750" data-aos-duration="700" >
             <p class="case-type">Acid Attack</p>
             <p>8,45,345</p>
           </div>
-          <div class="case-card fifth">
-            <p class="case-type">Dowry</p>
-            <p>8,45,345</p>
-          </div>
-          <div class="case-card sixth">
+          <div class="case-card fourth" data-aos="zoom-in" data-aos-delay="750" data-aos-duration="700" >
             <p class="case-type">Domestic Violence</p>
             <p>8,45,345</p>
           </div>
+          <div class="case-card fifth">
+            <p class="case-type">Dowry Deaths</p>
+            <p>8,45,345</p>
+          </div>
+          <div class="case-card sixth">
+            <p class="case-type">Kidnapping & Abduction of women</p>
+            <p>8,45,345</p>
+          </div>
           <div class="case-card seventh">
-            <p class="case-type">Girl Trafficking</p>
+            <p class="case-type">Immoral Trafficking</p>
             <p>8,45,345</p>
           </div>
           <div class="case-card eighth">
+            <p class="case-type">Assault on women with intent to outrage her modesty</p>
+            <p>8,45,345</p>
+          </div>
+          <div class="case-card ninth">
+            <p class="case-type">Abetment to sucide of women</p>
+            <p>8,45,345</p>
+          </div>
+          <div class="case-card tenth">
             <p class="case-type">Cyber Crime</p>
             <p>8,45,345</p>
           </div>
@@ -200,7 +208,7 @@
       <a href="./Districts/Ahmedabad.html" class="district-link">Ahmedabad</a>
       <a href="./Districts/Amreli.html" class="district-link">Amreli</a>
       <a href="./Districts/Anand.html" class="district-link">Anand</a>
-      <a href="./Districts/Anand.html" class="district-link">Aravalli</a>
+      <a href="./Districts/Aravalli.html" class="district-link">Aravalli</a>
       <a href="./Districts/banaskantha.html" class="district-link">Banaskantha</a>
       <a href="./Districts/bharuch.html" class="district-link">Bharuch</a>
       <a href="./Districts/bhavanagar.html" class="district-link">Bhavnagar</a>
@@ -215,7 +223,7 @@
       <a href="./Districts/junagadh.html" class="district-link">Junagadh</a>
       <a href="./Districts/kutch.html" class="district-link">Kutch</a>
       <a href="./Districts/kheda.html" class="district-link">Kheda</a>
-      <a href="./Districts/mehsana.html" class="district-link">Mahisagar</a>
+      <a href="./Districts/Mahisagar.html" class="district-link">Mahisagar</a>
       <a href="./Districts/mehsana.html" class="district-link">Mehsana</a>
       <a href="./Districts/morbi.html" class="district-link">Morbi</a>
       <a href="./Districts/narmada.html" class="district-link">Narmada</a>
@@ -228,7 +236,7 @@
       <a href="./Districts/surat.html" class="district-link">Surat</a>
       <a href="./Districts/surendranagar.html" class="district-link">Surendranagar</a>
       <a href="./Districts/tapi.html" class="district-link">Tapi</a>
-      <a href="./Districts/valsad.html" class="district-link">Vadodara</a>
+      <a href="./Districts/Vadodara.html" class="district-link">Vadodara</a>
       <a href="./Districts/valsad.html" class="district-link">Valsad</a>
       <h1 id="close" class="close-popup">
         <ion-icon name="close-outline"></ion-icon>
@@ -343,10 +351,10 @@
   const myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-      labels: ['Murder', 'Dowry', 'Acid Attack', 'Domestic Violence', 'kidnapping', 'Rape', 'cyber crime', 'Girl Trafficking'],
+      labels: ['Murder', 'Rape', 'Acid Attack', 'Domestic Violence', 'Dowry Deaths', 'Kidnapping & Abduction of women', 'Immoral Trafficking', 'Assault on women with intent to outrage her modesty','Abetment to sucide of women','Cyber Crime'],
       datasets: [{
         label: 'Votes',
-        data: [12, 2, 18, 5, 9, 32, 20, 11],
+        data: [12, 2, 18, 5, 9, 32, 20, 11,5,12],
         backgroundColor: [
           '#38E54D',
           '#47B5FF',
@@ -356,6 +364,8 @@
           '#990099',
           '#8479e1',
           '#ffadf0',
+          '#7D5A5A',
+          '#D57149'
         ],
         borderColor: [
           '#38E54D',
@@ -366,6 +376,8 @@
           '#990099',
           '#8479e1',
           '#ffadf0',
+          '#7D5A5A',
+          '#D57149'
         ],
         borderWidth: 1
       }]
@@ -448,11 +460,11 @@
   const myChart4 = new Chart(ctxHorizonBar, {
     type: 'bar',
     data: {
-      labels: ['Murder', 'Dowry', 'Acid Attack', 'Domestic Violence', 'Kidnapping', 'Rape', 'Cycber Crime', 'Girl Trafficking'],
+      labels: ['Murder', 'Rape', 'Acid Attack', 'Domestic Violence', 'Dowry Deaths', 'Kidnapping', 'Immoral Trafficking', 'Assault on women','sucide','Cyber Crime'],
       datasets: [{
         axis: 'y',
         label: 'Total Crimes',
-        data: [34, 21, 55, 65, 21, 11, 3, 8],
+        data: [34, 21, 55, 65, 21, 11, 3, 8,12,29],
         backgroundColor: [
           'rgba(255, 99, 132, 1)',
           'rgba(54, 162, 235, 1)',
@@ -461,7 +473,9 @@
           'rgba(153, 102, 255, 1)',
           'rgba(255, 159, 64, 1)',
           '#B6E388',
-          '#D0B8A8'
+          '#D0B8A8',
+          '#7D5A5A',
+          '#D57149'
         ],
         borderColor: [
           'rgba(255, 99, 132, 1)',
@@ -471,7 +485,9 @@
           'rgba(153, 102, 255, 1)',
           'rgba(255, 159, 64, 1)',
           '#B6E388',
-          '#D0B8A8'
+          '#D0B8A8',
+          '#7D5A5A',
+          '#D57149'
         ],
         borderWidth: 1
       }]
