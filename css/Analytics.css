@@ -251,6 +251,14 @@ body {
   margin: auto;
   margin-left: 5rem !important;
 }
+.amreli {
+  width: 50% !important;
+  margin: auto;
+  margin-left: 5rem !important;
+}
+.jamnagar {
+  margin-left: -5rem !important;
+}
 footer {
   width: 100%;
   background: linear-gradient(to right, #00093c, #2d0b00);
@@ -380,3 +388,11 @@ footer hr {
     flex-basis: 100%;
   }
 }
+@media screen and (max-width: 425px) {
+  .jamnagar {
+    margin-left: -3rem !important;
+  }
+}
+svg { height: 50vw;}
+    path { fill: #000; transition: .6s fill; }
+    path:hover { fill: dodgerblue;}
