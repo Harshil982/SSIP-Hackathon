@@ -101,5 +101,8 @@ body
     padding: 0.5rem 0.8rem;
 }
 @media screen and (max-width : 505px) {
-    
+    .my-table
+    {
+        width: 10% !important;
+    }
 }
