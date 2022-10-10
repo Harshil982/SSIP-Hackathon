@@ -178,12 +178,12 @@
     </div>
     <!-- Line Chart Main Container -->
     <div class="analytics-flex-container margin-top">
-      <div class="Hori-bar-chart-main-cont" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+      <div class="Hori-bar-chart-main-cont" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" data-offset="100">
         <div class="horizon-bar-chart">
           <canvas id="horizonBarChart" class="horizon-chart"></canvas>
         </div>
       </div>
-      <div class="line-chart-main-cont" data-aos="fade-up" data-aos-delay="600" data-aos-duration="700">
+      <div class="line-chart-main-cont" data-aos="fade-up" data-aos-delay="600" data-aos-duration="700" data-offset="100">
         <div class="line-chart-cont">
           <canvas id="lineChart" class="line-chart"></canvas>
         </div>
@@ -570,7 +570,7 @@
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init({
-    offset: 200,
+    offset: 100,
     duration: 1100,
   });
 </script>
