@@ -13,6 +13,10 @@ body
     justify-content: center;
     /* justify-content: space-between; */
 }
+.sidebar-content ul
+{
+    padding-left: 0 !important;
+}
 .search-btn
 {
     margin-left: 1rem;
@@ -51,10 +55,6 @@ body
     cursor: pointer;
     margin-left: 1rem;
 }
-.custom-margin
-{
-    margin-top: 1rem !important;
-}
 .search-icon
 {
     padding-top: 0.5rem;
@@ -68,7 +68,7 @@ body
 {
     position: sticky;
     top: 4.4rem;
-    z-index: 9999;
+    z-index: 9;
 }
 .custom-overflow
 {
@@ -100,9 +100,38 @@ body
     margin-left: 1rem;
     padding: 0.5rem 0.8rem;
 }
+.head-dark
+{
+    background-color: black;
+    color: white;
+}
+.filter
+{
+    margin-top: 1rem;
+}
 @media screen and (max-width : 505px) {
     .my-table
     {
         width: 10% !important;
+    }
+    .search-container
+    {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .search-input-container input
+    {
+        width: 100%;
+    }
+}
+@media screen and (max-width : 505px) {
+    .filter
+    {
+        width: 100%;
+    }
+    .apply-filter
+    {
+        margin-left: 0;
+        margin-top: 1rem;
     }
 }

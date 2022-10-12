@@ -40,6 +40,12 @@ body {
   transform: scale(1, 1);
   /* transition: transform 200ms; */
   margin-top: 4.5rem;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.district-popup::-webkit-scrollbar
+{
+  display: none;
 }
 .district-links-container {
   display: flex;
@@ -267,7 +273,7 @@ footer {
   border-top-left-radius: 125px;
   font-size: 13px;
   line-height: 20px;
-  margin-top: 6rem;
+  margin-top: 4rem;
 }
 .row {
   width: 90%;
@@ -391,6 +397,10 @@ footer hr {
 @media screen and (max-width: 425px) {
   .jamnagar {
     margin-left: -3rem !important;
+  }
+  footer
+  {
+    margin-top: 3rem;
   }
 }
 svg { height: 50vw;}

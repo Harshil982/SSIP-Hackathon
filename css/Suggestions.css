@@ -1,0 +1,116 @@
+.suggestion-main-container
+{
+    margin-top: 7rem;
+}
+.circular-container
+{
+    border: 1px solid gray;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin: 1rem 3rem;
+}
+.Cirular
+{
+    margin-top: 0.5rem;
+}
+.Circular-title
+{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: fit-content;
+    font-weight: 800;
+}
+.circular-content
+{
+    margin-left: 1.3rem;
+    margin-top: 0.4rem;
+    height: auto;
+    transition: height 1s;
+    text-align: justify;
+}
+.display-none-icon
+{
+    display: none;
+}
+.height-0
+{
+    overflow: hidden;
+    height: 0;
+}
+.leave-suggestion
+{
+    border: 1px solid gray;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin: 1rem 3rem;
+    /* width: 60%; */
+}
+.suggestion-input
+{
+    width: 49%;
+    padding: 0.4rem 0.4rem 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+    outline: none;
+    font-size: 1rem;
+}
+.sug-input-flex
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+textarea
+{
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+    max-width: 100%;
+    min-width: 100%;
+    padding-left: 0.8rem;
+    height: 5rem;
+    font-size: 1rem;
+}
+.suggestion-submit
+{
+    width: fit-content;
+    padding: 0.7rem 1.4rem;
+    font-size: 0.8rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+@media screen and (max-width : 650px) {
+    .leave-suggestion
+    {
+        width: auto;
+    }
+}
+@media screen and (max-width : 500px) {
+    .suggestion-input
+    {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .circular-container
+    {
+        margin: 1rem 1rem;
+    }
+    .leave-suggestion
+    {
+        margin: 1rem 1rem;
+    }
+    .circular-content
+    {
+        height: 7.3rem;
+        overflow: scroll;
+    }
+}
