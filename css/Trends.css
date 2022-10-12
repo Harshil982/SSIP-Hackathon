@@ -1,0 +1,29 @@
+.Trends-Container
+{
+    margin-top: 6rem;
+}
+.both-trends-flex
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+.both-trends-flex .case-card
+{
+    width: 44%;
+}
+.both-trends-flex .case-card .case-type
+{
+    font-size: 1.4rem;
+    margin-top: 3.8rem !important;
+}
+.both-trends-flex .case-card .case
+{
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+.both-trends-flex .case-card p:last-child
+{
+    margin-top: 0;
+}
