@@ -1,0 +1,82 @@
+.Trends-Container
+{
+    margin-top: 6rem;
+}
+.both-trends-flex
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+.both-trends-flex .case-card
+{
+    width: 48%;
+    margin-right: 0;
+}
+.both-trends-flex .case-card .case-type
+{
+    font-size: 1.4rem;
+    margin-top: 3.8rem !important;
+}
+.both-trends-flex .case-card .case
+{
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+.both-trends-flex .case-card p:last-child
+{
+    margin-top: 0;
+}
+.trends-chart-container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3.5rem 2rem;
+}
+.current-trend-chart-cotainer,.overall-trend-chart-cotainer
+{
+    width: 48%;
+}
+.district-trend-donught-chart
+{
+    width: 48%;
+}
+.district-trend-bar-chart
+{
+    width: 48%;
+}
+@media screen and (max-width : 768px) {
+    .Trends-Container .all-analytics-container
+    {
+        width: 90%;
+    }
+    .both-trends-flex
+    {
+        margin-right: 0;
+    }
+    .trends-chart-container
+    {
+        flex-wrap: wrap;
+    }
+    .current-trend-chart-cotainer,.overall-trend-chart-cotainer,.district-trend-donught-chart,.district-trend-bar-chart
+    {
+        width: 90%;
+        margin: auto;
+    }
+}
+@media screen and (max-width : 375px) {
+    .both-trends-flex
+    {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+    .both-trends-flex .case-card
+    {
+        margin-top: 1rem;
+        width: 100%;
+    }
+}

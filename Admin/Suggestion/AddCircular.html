@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Circular</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/Analytics.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/AddCircular.css" />
+    <link rel="shortcut icon" href="./../Images/Images/fav.png" type="image/x-icon">
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <i class="bx bx-menu menu-icon"></i>
+            <span class="logo-name">AddCircular</span>
+        </div>
+
+        <div class="sidebar">
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <span class="logo-name">SSIP</span>
+            </div>
+
+            <div class="sidebar-content">
+                <ul class="lists">
+                    <li class="list">
+                        <a href="./../Analytics/Analytics.html" class="nav-link">
+                            <i class="bx bx-pie-chart-alt-2 icon"></i>
+                            <span class="link">Analytics</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="./../Crime Records/index.html" class="nav-link">
+                            <ion-icon name="book-outline" class="icon"></ion-icon>
+                            <span class="link">Crime Records</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="./../Trends/Trends.html" class="nav-link">
+                            <ion-icon name="analytics-outline" class="icon"></ion-icon>
+                            <span class="link">Trends</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="./../Suggestion/Suggestions.html" class="nav-link">
+                            <i class="bx bx-message-rounded icon"></i>
+                            <span class="link">Suggestions</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="./../User Manipulation/AddUser.html" class="nav-link">
+                            <ion-icon name="person-add-outline" class="icon"></ion-icon>
+                            <span class="link">Add User</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="./../User Manipulation/DeleteUser.html" class="nav-link">
+                            <ion-icon name="remove-circle-outline" class="icon"></ion-icon>
+                            <span class="link">Delete User</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="./../User Manipulation/UpdateUser.html" class="nav-link">
+                            <ion-icon name="cog-outline" class="icon"></ion-icon>
+                            <span class="link">Update User</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="bottom-cotent">
+                    <li class="list">
+                        <a href="#" class="nav-link">
+                            <i class="bx bx-log-out icon"></i>
+                            <span class="link">Logout</span>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="overlay"></section>
+    <div class="manage-top" ></div>
+    <form class="AddCircular-form" >
+        <h2>Add Circular</h2>
+        <input type="date" name="" id="" required>
+        <input type="text" class="" placeholder="Enter Subject Here" required>
+        <textarea name="" id="" placeholder="Enter Your Suggestion" required></textarea>
+        <button type="submit" class="form-submit-btn" >Submit</button>
+    </form>
+    <footer id="footer">
+        <div class="row">
+            <div class="col">
+                <div class="logos-cont">
+                    <img src="./../Images/Images/fav.png" class="logo" alt="logo">
+                    <img src="./../Images/Images/azadi-final.png" class="logo" alt="logo">
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum adipisci similique id nam omnis
+                    error
+                    odit
+                    iste nesciunt.</p>
+            </div>
+            <div class="col">
+                <h3>Office</h3>
+                <p>Sardar Bhavan</p>
+                <p>Block 9 ,6th floor, Sector-10 </p>
+                <p>Gandhinagar, Gujarat, 382010</p>
+                <p class="email-id">pa2sec-wncw@gujarat.gov.in</p>
+                <h4>079 2325 7942</h4>
+            </div>
+            <div class="col">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="./../Analytics/Analytics.html"><i
+                                class="bx bx-pie-chart-alt-2 icon icon-active footer-icon"></i>&nbsp;&nbsp;Analytics</a>
+                    </li>
+                    <li><a href="./../Crime Records/index.html">
+                            <ion-icon name="book-outline" class="icon"></ion-icon>&nbsp;&nbsp;Crime Records
+                        </a></li>
+                    <li><a href="./../Trends/Trends.html">
+                            <ion-icon name="analytics-outline" class="icon"></ion-icon>&nbsp;&nbsp;Trends
+                        </a></li>
+                    <li><a href="./Suggestions.html"><i class="bx bx-message-rounded icon"></i>&nbsp;&nbsp;Suggestions</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Scan QR</h3>
+                <img src="./../Images/Images/final_Qr.png" class="login-qr" alt="">
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Team Sentinals &#169; 2022 - All Rights Reserved</p>
+    </footer>
+    <!-- Footer Ends -->
+    <script>
+        const navBar = document.querySelector("nav"),
+            menuBtns = document.querySelectorAll(".menu-icon"),
+            overlay = document.querySelector(".overlay");
+
+        menuBtns.forEach((menuBtn) => {
+            menuBtn.addEventListener("click", () => {
+                navBar.classList.toggle("open");
+            });
+        });
+
+        overlay.addEventListener("click", () => {
+            navBar.classList.remove("open");
+        });
+    </script>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>

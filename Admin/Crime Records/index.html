@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crime Records</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/CrimeRecord.css" />
+    <link rel="stylesheet" href="./css/Footer.css" />
+    <link rel="shortcut icon" href="./../Images/Images/fav.png" type="image/x-icon">
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav>
+        <div class="logo custom-margin">
+            <i class="bx bx-menu menu-icon"></i>
+            <span class="logo-name">CrimeRecords</span>
+        </div>
+
+        <div class="sidebar">
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <span class="logo-name">SSIP</span>
+            </div>
+
+            <div class="sidebar-content">
+                <ul class="lists">
+                    <li class="list">
+                        <a href="./../Analytics/Analytics.html" class="nav-link">
+                            <i class="bx bx-pie-chart-alt-2 icon"></i>
+                            <span class="link">Analytics</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#" class="nav-link nav-link-active">
+                            <ion-icon name="book-outline" class="icon icon-active"></ion-icon>
+                            <span class="link icon-active">Crime Records</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="./../Trends/Trends.html" class="nav-link">
+                            <ion-icon name="analytics-outline" class="icon"></ion-icon>
+                            <span class="link">Trends</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="./../Suggestion/Suggestions.html" class="nav-link">
+                            <i class="bx bx-message-rounded icon"></i>
+                            <span class="link">Suggestions</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="./../User Manipulation/AddUser.html" class="nav-link">
+                            <ion-icon name="person-add-outline" class="icon"></ion-icon>
+                            <span class="link">Add User</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="./../User Manipulation/DeleteUser.html" class="nav-link">
+                            <ion-icon name="remove-circle-outline" class="icon"></ion-icon>
+                            <span class="link">Delete User</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="./../User Manipulation/UpdateUser.html" class="nav-link">
+                            <ion-icon name="cog-outline" class="icon"></ion-icon>
+                            <span class="link">Update User</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="bottom-cotent">
+                    <li class="list">
+                        <a href="#" class="nav-link">
+                            <i class="bx bx-log-out icon"></i>
+                            <span class="link">Logout</span>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="overlay"></section>
+
+    <!-- Crime Records Starts -->
+    <div class="search-container settle-top">
+        <div class="search-input-container">
+            <input type="text" name="" id="" placeholder="Search Crime Record">
+        </div>
+        <button class="search-btn" title="Search">
+            <ion-icon name="search-outline" class="search-icon"></ion-icon>
+        </button>
+        <!-- <button class="filter-btn" title="Filter" >
+        Filter
+      </button> -->
+    </div>
+
+    <!-- Filter Option Starts -->
+    <div class="all-filter-container">
+        <div class="Year-Filter filter">
+            <p>Select Year</p>
+            <select class="form-select form-select-sm" aria-label="Default select example">
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+            </select>
+        </div>
+        <div class="Crime-Filter filter">
+            <p>Select Crime Type</p>
+            <select class="form-select" aria-label="Default select example">
+                <option value="Murder">Murder</option>
+                <option value="Rape">Rape</option>
+                <option value="Acid Attack">Acid Attack</option>
+                <option value="Domestic Violence">Domestic Violence</option>
+                <option value="Dowry Deaths">Dowry Deaths</option>
+                <option value="Kidnapping">Kidnapping</option>
+                <option value="Immoral Trafficking">Immoral Trafficking</option>
+                <option value="Assault on Women">Assault on Women</option>
+                <option value="Sucide">Sucide</option>
+                <option value="Cyber Crime">Cyber Crime</option>
+            </select>
+        </div>
+        <div class="Crime-Filter filter">
+            <p>Select District</p>
+            <select id="ddl" class="form-select" aria-label="Default select example"
+                onchange="configureDropDownLists(this,document.getElementById('ddl2'))">
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Amreli">Amreli</option>
+                <option value="Anand">Anand</option>
+                <option value="Aravalli">Aravalli</option>
+                <option value="Banaskantha">Banaskantha</option>
+                <option value="Bharuch">Bharuch</option>
+                <option value="Bhavnagar">Bhavnagar</option>
+                <option value="Botad">Botad</option>
+                <option value="Chhota Udepur">Chhota Udepur</option>
+                <option value="Dahod">Dahod</option>
+                <option value="Dang">Dang</option>
+                <option value="DevBhoomi Dwarka">DevBhoomi Dwarka</option>
+                <option value="Gandhinagar">Gandhinagar</option>
+                <option value="Gir Somnath">Gir Somnath</option>
+                <option value="Jamnagar">Jamnagar</option>
+                <option value="Junagadh">Junagadh</option>
+                <option value="Kutch">Kutch</option>
+                <option value="Kheda">Kheda</option>
+                <option value="Mahisagar">Mahisagar</option>
+                <option value="Mehsana">Mehsana</option>
+                <option value="Morbi">Morbi</option>
+                <option value="Narmada">Narmada</option>
+                <option value="Navsari">Navsari</option>
+                <option value="Panchmahal">Panchmahal</option>
+                <option value="Patan">Patan</option>
+                <option value="Porbandar">Porbandar</option>
+                <option value="Rajkot">Rajkot</option>
+                <option value="Sabarkantha">Sabarkantha</option>
+                <option value="Surat">Surat</option>
+                <option value="Surendranagar">Surendranagar</option>
+                <option value="Tapi">Tapi</option>
+                <option value="Vadodara">Vadodara</option>
+                <option value="Valsad">Valsad</option>
+            </select>
+        </div>
+        <div class="Taluka-Filter filter">
+            <p>Select Taluka</p>
+            <select class="form-select" id="ddl2">
+                <option value="Ahmedabad 1">Ahmedabad 1</option>
+                <option value="Ahmedabad 2">Ahmedabad 2</option>
+                <option value="Ahmedabad 3">Ahmedabad 3</option>
+            </select>
+        </div>
+        <div class="Crime-Filter filter">
+            <p>Select Age-Group</p>
+            <select class="form-select" aria-label="Default select example">
+                <option value="18-25">0-18</option>
+                <option value="18-25">18-25</option>
+                <option value="25-35">25-35</option>
+                <option value="35-45">35-45</option>
+                <option value="45-55">45-55</option>
+                <option value="55-65">55-65</option>
+                <option value="65 & above">65 & above</option>
+            </select>
+        </div>
+        <button class="apply-filter">Apply</button>
+    </div>
+    <!-- Filter Option Ends -->
+    <table class="table my-table">
+        <thead class="head-dark head">
+            <tr>
+                <th scope="col">Sr no.</th>
+                <th scope="col">FIR ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Crime Type</th>
+                <th scope="col">Age</th>
+                <th scope="col">Gender</th>
+                <th scope="col">District</th>
+                <th scope="col">Taluka</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Footer Starts -->
+    <footer id="footer">
+        <div class="rowww">
+            <div class="col">
+                <div class="logos-cont">
+                    <img src="./../Images/Images/fav.png" class="logo" alt="logo">
+                    <img src="./../Images/Images/azadi-final.png" class="logo" alt="logo">
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum adipisci similique id nam omnis error
+                    odit
+                    iste nesciunt.</p>
+            </div>
+            <div class="col">
+                <h3>Office</h3>
+                <p>Sardar Bhavan</p>
+                <p>Block 9 ,6th floor, Sector-10 </p>
+                <p>Gandhinagar, Gujarat, 382010</p>
+                <p class="email-id">pa2sec-wncw@gujarat.gov.in</p>
+                <h4>079 2325 7942</h4>
+            </div>
+            <div class="col">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href=""><i
+                                class="bx bx-pie-chart-alt-2 icon icon-active footer-icon"></i>&nbsp;&nbsp;Analytics</a>
+                    </li>
+                    <li><a href="">
+                            <ion-icon name="book-outline" class="icon"></ion-icon>&nbsp;&nbsp;Crime Records
+                        </a></li>
+                    <li><a href="">
+                            <ion-icon name="analytics-outline" class="icon"></ion-icon>&nbsp;&nbsp;Trends
+                        </a></li>
+                    <li><a href=""><i class="bx bx-message-rounded icon"></i>&nbsp;&nbsp;Suggestions</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Scan QR</h3>
+                <img src="./../Images/Images/final_Qr.png" class="login-qr" alt="">
+                <!-- <div class="social-media-icons">
+          <ion-icon name="logo-facebook" class="sMedia"></ion-icon>
+          <ion-icon name="logo-whatsapp" class="sMedia"></ion-icon>
+          <ion-icon name="logo-instagram" class="sMedia"></ion-icon>
+          <ion-icon name="logo-twitter" class="sMedia"></ion-icon>
+        </div> -->
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Team Sentinals &#169; 2022 - All Rights Reserved</p>
+    </footer>
+    <!-- Footer Ends -->
+    <!-- Crime Records Ends -->
+
+    <script>
+        const navBar = document.querySelector("nav"),
+            menuBtns = document.querySelectorAll(".menu-icon"),
+            overlay = document.querySelector(".overlay");
+
+        menuBtns.forEach((menuBtn) => {
+            menuBtn.addEventListener("click", () => {
+                navBar.classList.toggle("open");
+            });
+        });
+
+        overlay.addEventListener("click", () => {
+            navBar.classList.remove("open");
+        });
+
+        const Talukas = {
+            Ahmedabad: ["Ahmedabad 1", "Ahmedabad 2"],
+            Aravalli: ["Malpur", "Modasa", "Dhansura"],
+        }
+
+        console.log(Talukas["Ahmedabad"])
+
+        // Change options Dropdown
+        function configureDropDownLists(ddl1, ddl2) {
+            var Ahmedabad = ['Ahmedabad 1', 'Ahmedabad 2', 'Ahmedabad 3'];
+            var Aravalli = ['Malpur', 'Modasa', 'Dhansura'];
+            var Rajkot = ['Rajkot 1', 'Rajkot 2', 'Rajkot 3'];
+
+            switch (ddl1.value) {
+                case 'Ahmedabad':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Ahmedabad.length; i++) {
+                        createOption(ddl2, Ahmedabad[i], Ahmedabad[i]);
+                    }
+                    break;
+                case 'Aravalli':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Aravalli.length; i++) {
+                        createOption(ddl2, Aravalli[i], Aravalli[i]);
+                    }
+                    break;
+                case 'Rajkot':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Rajkot.length; i++) {
+                        createOption(ddl2, Rajkot[i], Rajkot[i]);
+                    }
+                    break;
+                default:
+                    ddl2.options.length = 0;
+                    break;
+            }
+
+        }
+
+        function createOption(ddl, text, value) {
+            var opt = document.createElement('option');
+            opt.value = value;
+            opt.text = text;
+            ddl.options.add(opt);
+        }
+
+    </script>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>
