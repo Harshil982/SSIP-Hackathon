@@ -162,4 +162,8 @@ body
     {
         width: 100%;
     }
+    .forgot-pass
+    {
+        margin-left: 0;
+    }
 }
