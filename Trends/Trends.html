@@ -68,6 +68,12 @@
                             <span class="link">Suggestions</span>
                         </a>
                     </li>
+                    <li class="list">
+                        <a href="./../Suggestion/Suggestions.html" class="nav-link">
+                            <ion-icon name="map-outline" class="icon"></ion-icon>
+                            <span class="link">Mapping</span>
+                        </a>
+                    </li>
                 </ul>
 
                 <div class="bottom-cotent">
@@ -118,15 +124,22 @@
                         <p class="case">Murder</p>
                         <p>1987</p>
                     </div>
+                    <div class="case-card third" data-aos="zoom-in" data-aos-delay="700" data-aos-duration="700">
+                        <p class="case-type">Future Trend</p>
+                        <p class="case">Murder</p>
+                        <p>2087</p>
+                    </div>
                 </div>
                 <!-- Slider Ends Here -->
             </div>
         </div>
         <div class="trends-chart-container">
             <div class="current-trend-chart-cotainer">
+                <p class="Chart-title">Current Trend Cases vs Year</p>
                 <canvas id="lineChart" class="line-chart"></canvas>
             </div>
             <div class="overall-trend-chart-cotainer">
+                <p class="Chart-title">Overall Trend Cases vs Year</p>
                 <canvas id="lineChart2" class="line-chart"></canvas>
             </div>
         </div>
@@ -134,14 +147,21 @@
         <div class="trends-chart-container">
             <!-- Doghnut Main container -->
             <div class="district-trend-donught-chart">
-                <div class="">
-                    <canvas id="myChart" class="doughnut-chart"></canvas>
+                <div>
+                    <p class="Chart-title">Crime Type vs Crime Numbers For 2015-2020</p>
+                    <div class="">
+                        <canvas id="myChart" class="doughnut-chart"></canvas>
+                    </div>
                 </div>
             </div>
             <!-- Top Districts Container -->
             <div class="district-trend-bar-chart">
-                <div class="">
-                    <canvas id="horizonBarChart" class="horizon-chart"></canvas>
+                <div>
+                    <p class="Chart-title">Crime Type vs Crime Numbers For 2020</p>
+
+                    <div class="">
+                        <canvas id="horizonBarChart" class="horizon-chart"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
@@ -156,7 +176,8 @@
                     <img src="./../Images/Images/fav.png" class="logo" alt="logo">
                     <img src="./../Images/Images/azadi-final.png" class="logo" alt="logo">
                 </div>
-                <p>Ensure that children are fed, empower women to live with dignity, and feed and nurture women in an environment free from violence and discrimination.</p>
+                <p>Ensure that children are fed, empower women to live with dignity, and feed and nurture women in an
+                    environment free from violence and discrimination.</p>
             </div>
             <div class="col">
                 <h3>Office</h3>
@@ -390,8 +411,7 @@
                     display: false,
                 },
                 subtitle: {
-                    display: true,
-                    text: 'Crime Type vs Number of Cases'
+                    display: false,
                 },
                 legend: {
                     display: true,
@@ -411,7 +431,7 @@
                 label: 'Total Crimes',
                 data: [10000, 15000, 12345, 32123, 8756, 34000],
                 fill: false,
-                borderColor: 'rgb(75, 192, 192)',
+                borderColor: '#d9433f',
                 tension: 0.3
             }]
         },
@@ -435,7 +455,7 @@
             labels: ['2015', '2016', '2017', '2018', '2019', '2020'],
             datasets: [{
                 label: 'Total Crimes',
-                data: [8000, 3000, 2345, 9123,10756, 12000],
+                data: [8000, 3000, 2345, 9123, 10756, 12000],
                 fill: false,
                 borderColor: 'rgb(75, 192, 192)',
                 tension: 0.3

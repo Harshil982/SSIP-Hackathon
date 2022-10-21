@@ -11,7 +11,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/Analytics.css" />
-  <link rel="shortcut icon" href="./../Images/Images/fav.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./Images/Images/fav.png" type="image/x-icon">
 
   <!-- Boxicons CSS -->
   <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
@@ -44,9 +44,9 @@
       <div class="sidebar-content">
         <ul class="lists">
           <li class="list">
-            <a href="./Analytics.html" class="nav-link nav-link-active">
-              <i class="bx bx-pie-chart-alt-2 icon icon-active"></i>
-              <span class="link icon-active">Analytics</span>
+            <a href="./Analytics.html" class="nav-link">
+              <i class="bx bx-pie-chart-alt-2 icon"></i>
+              <span class="link">Analytics</span>
             </a>
           </li>
           <li class="list">
@@ -65,6 +65,12 @@
             <a href="./Suggestion/Suggestions.html" class="nav-link">
               <i class="bx bx-message-rounded icon"></i>
               <span class="link">Suggestions</span>
+            </a>
+          </li>
+          <li class="list">
+            <a href="./Mapping/gujrat_all_2017.html" class="nav-link nav-link-active">
+              <ion-icon name="map-outline" class="icon icon-active" ></ion-icon>
+              <span class="link icon-active">Mapping</span>
             </a>
           </li>
         </ul>
@@ -154,6 +160,7 @@
     <div class="analytics-flex-container">
       <!-- Doghnut Main container -->
       <div class="doughnut-main-cont">
+        <p class="Chart-title-A">Crime Type vs Crime Numbers for All Years</p>
         <div class="doughnut-chart-cont">
           <canvas id="myChart" class="doughnut-chart"></canvas>
         </div>
@@ -171,6 +178,7 @@
           </div>
           <!-- Bar Chart Container -->
           <div class="bar-chart-cont">
+            <p class="Chart-title-A">Top District vs Total Crime Numbers</p>
             <canvas id="barChart" class="line-chart"></canvas>
           </div>
         </div>
@@ -180,12 +188,14 @@
     <div class="analytics-flex-container margin-top">
       <div class="Hori-bar-chart-main-cont" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700"
         data-offset="100">
+        <p class="Chart-title-A">Crime Type vs Crime Numbers for Current Year</p>
         <div class="horizon-bar-chart">
           <canvas id="horizonBarChart" class="horizon-chart"></canvas>
         </div>
       </div>
       <div class="line-chart-main-cont" data-aos="fade-up" data-aos-delay="600" data-aos-duration="700"
         data-offset="100">
+        <p class="Chart-title-A">Top District vs Total Crime Numbers</p>
         <div class="line-chart-cont">
           <canvas id="lineChart" class="line-chart"></canvas>
         </div>
@@ -210,21 +220,21 @@
         <p>Sardar Bhavan</p>
         <p>Block 9 ,6th floor, Sector-10 </p>
         <p>Gandhinagar, Gujarat, 382010</p>
-        <p class="email-id">pa2sec-wncw@gujarat.gov.in</p>
+        <p class="email-id"><a href="mailto:pa2sec-wncw@gujarat.gov.in" >pa2sec-wncw@gujarat.gov.in</a></p>
         <h4>079 2325 7942</h4>
       </div>
       <div class="col">
         <h3>Links</h3>
         <ul>
-          <li><a href=""><i class="bx bx-pie-chart-alt-2 icon icon-active footer-icon"></i>&nbsp;&nbsp;Analytics</a>
+          <li><a href="./Analytics.html"><i class="bx bx-pie-chart-alt-2 icon footer-icon"></i>&nbsp;&nbsp;Analytics</a>
           </li>
-          <li><a href="">
+          <li><a href="./Crime Records/Index.html">
               <ion-icon name="book-outline" class="icon"></ion-icon>&nbsp;&nbsp;Crime Records
             </a></li>
-          <li><a href="">
+          <li><a href="./Trends/Trends.html">
               <ion-icon name="analytics-outline" class="icon"></ion-icon>&nbsp;&nbsp;Trends
             </a></li>
-          <li><a href=""><i class="bx bx-message-rounded icon"></i>&nbsp;&nbsp;Suggestions</a></li>
+          <li><a href="./Suggestion/Suggestions.html"><i class="bx bx-message-rounded icon"></i>&nbsp;&nbsp;Suggestions</a></li>
         </ul>
       </div>
       <div class="col">
@@ -435,7 +445,7 @@
           display: false,
         },
         subtitle: {
-          display: true,
+          display: false,
           text: 'Crime Type vs Number of Cases'
         },
         legend: {
@@ -452,13 +462,15 @@
     type: 'line',
     data: {
       labels: ['2015', '2016', '2017', '2018', '2019', '2020'],
-      datasets: [{
-        label: 'Total Crimes',
-        data: [10000, 15000, 12345, 32123, 8756, 34000],
-        fill: false,
-        borderColor: 'rgb(75, 192, 192)',
-        tension: 0.3
-      }]
+      datasets: [
+        {
+          label: 'Total Crimes',
+          data: [1000, 1500, 1234, 3212, 8756, 3400],
+          fill: false,
+          borderColor: 'rgba(255, 99, 132, 1)',
+          tension: 0.3
+        }
+      ]
     },
     options: {
       scales: scales,
@@ -467,6 +479,9 @@
           xOffset: 150,   // defer until 150px of the canvas width are inside the viewport
           yOffset: '50%', // defer until 50% of the canvas height are inside the viewport
           delay: 500      // delay of 500 ms after the canvas is considered inside the viewport
+        },
+        legend: {
+          display: false,
         }
       }
     }

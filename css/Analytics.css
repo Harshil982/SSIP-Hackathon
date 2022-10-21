@@ -320,6 +320,16 @@ footer {
   border-bottom: 1px solid #ccc;
   margin: 20px 0;
 }
+.email-id a
+{
+  color: white;
+  text-decoration: none;
+  transition: 300ms;
+}
+.email-id a:hover
+{
+  color: blue;
+}
 .col ul li {
   list-style: none;
   margin-bottom: 12px;
@@ -327,6 +337,11 @@ footer {
 .col ul li a {
   text-decoration: none;
   color: #fff;
+  transition: 300ms;
+}
+.col ul li a:hover
+{
+  color: blue;
 }
 .sMedia {
   width: 40px;
@@ -347,6 +362,12 @@ footer hr {
 }
 .copyright {
   text-align: center;
+}
+.Chart-title-A
+{
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 @media screen and (max-width: 768px) {
   .row {

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Document</title>
+    <style>
+        .card
+        {
+            background-color: rgba(255, 166, 0, 0.24);
+            color: orange;
+            padding: 1rem;
+            width: 20rem;
+            border-radius: 1rem;
+            text-align: center;
+            min-height: 40rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 data-aos="fade-in" data-aos-delay="500" >hello</h1>
+    <h1 data-aos="fade-in" data-aos-delay="1000" >One</h1>
+    <h1 data-aos="fade-in" data-aos-delay="1500" >Two</h1>
+    <h1 data-aos="fade-in" data-aos-delay="2000" >Three</h1>
+    <div class="card" >
+        <p>Murder</p>
+        <h1>34,189</h1>
+    </div>
+</body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset: 200,
+    duration: 1000,
+  });
+</script>
+</html>

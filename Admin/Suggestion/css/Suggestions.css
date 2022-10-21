@@ -127,6 +127,32 @@ textarea
 {
     outline: none;
 }
+.received-suggesstion-cont
+{
+    border: 1px solid gray;
+    padding: 1rem 0.5rem;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    border-radius: 1rem;
+}
+.received-suggesstion-cont p
+{
+    width: 90%;
+}
+.add-sugg
+{
+    background: none;
+    border: 1px solid black;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 0.7rem;
+}
 @media screen and (max-width : 650px) {
     .leave-suggestion
     {

@@ -11,7 +11,7 @@
 }
 .both-trends-flex .case-card
 {
-    width: 48%;
+    width: 30%;
     margin-right: 0;
 }
 .both-trends-flex .case-card .case-type
@@ -46,6 +46,11 @@
 .district-trend-bar-chart
 {
     width: 48%;
+}
+.Chart-title
+{
+    margin-bottom: 1rem;
+    text-align: center;
 }
 @media screen and (max-width : 768px) {
     .Trends-Container .all-analytics-container

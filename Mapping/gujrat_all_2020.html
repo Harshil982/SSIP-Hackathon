@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Create and style clusters</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+    <link
+      href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script>
+            var map = new maplibregl.Map({
+              container: "map",
+              style:
+                "https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL",
+              center: [71.19238, 22.258652],
+              zoom: 6.5,
+            });
+
+            map.on("load", function () {
+              // Add a new source from our GeoJSON data and
+              // set the 'cluster' option to true. GL-JS will
+              // add the point_count property to your source data.
+              
+              const ahemdabad_cords = new Array();
+              const amreli_cords = new Array();
+              const anand_cords = new Array();
+              const aravalli_cords = new Array();
+              const banaskantha_cords = new Array();
+              const bharuch_cords = new Array();
+              const bhavnagar_cords = new Array();
+              const botad_cords = new Array();
+              const chota_cords = new Array();
+              const dahod_cords = new Array();
+              const dang_cords = new Array();
+              const dwarka_cords = new Array();
+              const gandhinagar_cords = new Array();
+              const gir_cords = new Array();
+              const jamnagar_cords = new Array();
+              const junagadh_cords = new Array();
+              const kutch_cords = new Array();
+              const kheda_cords = new Array();
+              const mahisagar_cords = new Array();
+              const mehsana_cords = new Array();
+              const morbi_cords = new Array();
+              const narmada_cords = new Array();
+              const navsari_cords = new Array();
+              const panchmahal_cords = new Array();
+              const patan_cords = new Array();
+              const porbandar_cords = new Array();
+              const rajkot_cords = new Array();
+              const sabarkantha_cords = new Array();
+              const surat_cords = new Array();
+              const surendranagar_cords = new Array();
+              const tapi_cords = new Array();
+              const vadodara_cords = new Array();
+              const valsad_cords = new Array();
+            
+
+
+
+
+              
+              // ahemdabad xy
+              const longi_ahemdabad =72.571362;
+              const lati_ahemdabad = 23.022505;
+              // amreli xy
+              const longi_amreli = 71.220355;
+              const lati_amreli = 21.601524;
+              // anand xy
+              const longi_anand = 72.928871;
+              const lati_anand = 22.564518;
+              // aravalli xy
+              const longi_aravalli = 73.37087;
+              const lati_aravalli = 23.520491;
+              // banaskantha xy
+              const longi_banaskantha = 71.762248;
+              const lati_banaskantha = 24.345474;
+              // bharuch xy
+              const longi_bharuch = 72.995875;
+              const lati_bharuch = 21.705136;
+              // bhavnagar xy
+              const longi_bhavnagar = 71.959702;
+              const lati_bhavnagar = 21.719738;
+              // botad xy
+              const longi_botad = 71.663622;
+              const lati_botad = 22.172251;
+              // chota xy
+              const longi_chota = 74.011999;
+              const lati_chota= 22.308494;
+              // dahod xy
+              const longi_dahod = 74.260618;
+              const lati_dahod = 22.834499;
+              // dang xy
+              const longi_dang = 73.700709;
+              const lati_dang = 20.825378;
+              // dwarka xy
+              const longi_dwarka = 68.968456;
+              const lati_dwarka = 22.244197;
+              // gandhinagar xy
+              const longi_gandhinagar = 72.63691;
+              const lati_gandhinagar = 23.215635;
+              // gir xy
+              const longi_gir = 70.562934;
+              const lati_gir = 21.004552;
+              // jamnagar xy
+              const longi_jamnagar = 70.05773;
+              const lati_jamnagar = 22.470702;
+              // junagadh xy
+              const longi_junagadh = 70.457944;
+              const lati_junagadh = 21.52222;
+              // kutch xy
+              const longi_kutch = 69.666932;
+              const lati_kutch = 23.242;
+              // kheda xy
+              const longi_kheda = 69.859741;
+              const lati_kheda = 23.733733;
+              // mahisagar xy
+              const longi_mahisagar = 73.559413;
+              const lati_mahisagar = 23.171126;
+              // mehsana xy
+              const longi_mehsana = 72.369325;
+              const lati_mehsana = 23.587961;
+              // morbi xy
+              const longi_morbi = 70.849081;
+              const lati_morbi = 22.825187;
+              // narmada xy
+              const longi_narmada = 73.559413;
+              const lati_narmada = 21.875718;
+              // navsari xy
+              const longi_navsari  = 72.952035;
+              const lati_navsari = 20.946702;
+              // panchmahal xy
+              const longi_panchmahal = 73.633017;
+              const lati_panchmahal = 22.777048;
+              // patan xy
+              const longi_patan = 73.856813;
+              const lati_patan = 23.573843;
+              // porbandar xy
+              const longi_porbandar = 69.629306;
+              const lati_porbandar = 21.641698;
+              // rajkot xy
+              const longi_rajkot = 70.80216;
+              const lati_rajkot = 22.303894;
+              // sabarkantha xy
+              const longi_sabarkantha = 72.993297;
+              const lati_sabarkantha = 23.84767;
+              // surat xy
+              const longi_surat = 72.831061;
+              const lati_surat = 21.17024;
+              // surendranagar xy
+              const longi_surendranagar = 72.63691;
+              const lati_surendranagar = 23.215635;
+              // tapi xy
+              const longi_tapi = 71.636954;
+              const lati_tapi = 22.72512;
+              // vadodara xy
+              const longi_vadodara = 73.181219;
+              const lati_vadodara = 22.307159;
+              // valsad xy
+              const longi_valsad = 72.934245;
+              const lati_valsad = 20.599235;
+
+
+
+              
+
+
+              
+              // ahemdabad code
+              for (let index = 1; index <= 9; index++) {
+                const element1 = longi_ahemdabad +  Math.random()/5;
+                const element2 = lati_ahemdabad + Math.random()/5;
+                const temp = [element1,element2]
+                ahemdabad_cords.push(temp)
+              }
+              // amreli code
+              for (let index = 1; index <= 0; index++) {
+                const element1 = longi_amreli  +  Math.random()/5;
+                const element2 = lati_amreli + Math.random()/5;
+                const temp = [element1,element2]
+                amreli_cords.push(temp)
+              }
+              // anand code
+              for (let index = 1; index <= 2; index++) {
+                const element1 = longi_anand  +  Math.random()/70;
+                const element2 = lati_anand + Math.random()/70;
+                const temp = [element1,element2]
+                anand_cords.push(temp)
+              }
+              // aravalli code
+              for (let index = 1; index <= 0; index++) {
+                const element1 = longi_aravalli  +  Math.random()/70;
+                const element2 = lati_aravalli + Math.random()/70;
+                const temp = [element1,element2]
+                aravalli_cords.push(temp)
+              }
+              // banaskantha code
+              for (let index = 1; index <= 0; index++) {
+                const element1 = longi_banaskantha  +  Math.random()/70;
+                const element2 = lati_banaskantha + Math.random()/70;
+                const temp = [element1,element2]
+                banaskantha_cords.push(temp)
+              }
+              // bharuch code
+              for (let index = 1; index <= 0; index++) {
+                const element1 = longi_bharuch  +  Math.random()/70;
+                const element2 = lati_bharuch + Math.random()/70;
+                const temp = [element1,element2]
+                bharuch_cords.push(temp)
+              }
+              // bhavnagar code
+              for (let index = 1; index <= 1; index++) {
+                const element1 = longi_bhavnagar  +  Math.random()/7;
+                const element2 = lati_bhavnagar + Math.random()/7;
+                const temp = [element1,element2]
+                bhavnagar_cords.push(temp)
+              }
+              // botad code
+              for (let index = 1; index <= 0; index++) {
+                const element1 = longi_botad  +  Math.random()/70;
+                const element2 = lati_botad + Math.random()/70;
+                const temp = [element1,element2]
+                botad_cords.push(temp)
+              }
+              // chota code
+              for (let index = 1; index <= 0; index++) {
+                const element1 = longi_chota  +  Math.random()/70;
+                const element2 = lati_chota + Math.random()/70;
+                const temp = [element1,element2]
+                chota_cords.push(temp)
+              }
+              // dahod code
+              for (let index = 1; index <= 0; index++) {
+                const element1 = longi_dahod  +  Math.random()/70;
+                const element2 = lati_dahod + Math.random()/70;
+                const temp = [element1,element2]
+                dahod_cords.push(temp)
+              }
+              // dang code
+              for (let index = 1; index <= 0; index++) {
+                const element1 = longi_dang  +  Math.random()/70;
+                const element2 = lati_dang + Math.random()/70;
+                const temp = [element1,element2]
+                dang_cords.push(temp)
+              }
+              // dwarka code
+              for (let index = 1; index <= 0; index++) {
+                const element1 = longi_dwarka  +  Math.random()/70;
+                const element2 = lati_dwarka + Math.random()/70;
+                const temp = [element1,element2]
+                dwarka_cords.push(temp)
+              }
+              // gandhinagar code
+              for (let index = 1; index <= 2; index++) {
+                const element1 = longi_gandhinagar + Math.random()/70;
+                const element2 = lati_gandhinagar +  Math.random()/70;
+                const temp = [element1,element2]
+                gandhinagar_cords.push(temp)
+              }
+              // gir code
+              for (let index = 1; index <= 1; index++) {
+                const element1 = longi_gir + Math.random()/70;
+                const element2 = lati_gir +  Math.random()/70;
+                const temp = [element1,element2]
+                gir_cords.push(temp)
+              }
+              // jamnagar code
+              for (let index = 1; index <= 2; index++) {
+                const element1 = longi_jamnagar + Math.random()/70;
+                const element2 = lati_jamnagar +  Math.random()/70;
+                const temp = [element1,element2]
+                jamnagar_cords.push(temp)
+              }
+              // junagadh code
+              for (let index = 1; index <= 0; index++) {
+                const element1 = longi_junagadh + Math.random();
+                const element2 = lati_junagadh +  Math.random();
+                const temp = [element1,element2]
+                junagadh_cords.push(temp)
+              }
+              // kutch code
+              for (let index = 1; index <= 4; index++) {
+                const element1 = longi_kutch + Math.random();
+                const element2 = lati_kutch +  Math.random();
+                const temp = [element1,element2]
+                kutch_cords.push(temp)
+              }
+              // kheda code
+              for (let index = 1; index <= 0; index++) {
+                const element1 = longi_kheda + Math.random()/70;
+                const element2 = lati_kheda +  Math.random()/70;
+                const temp = [element1,element2]
+                kheda_cords.push(temp)
+              }
+              // mahisagar code
+              for (let index = 1; index <= 0; index++) {
+                const element1 = longi_mahisagar + Math.random()/70;
+                const element2 = lati_mahisagar +  Math.random()/70;
+                const temp = [element1,element2]
+                mahisagar_cords.push(temp)
+              }
+              // mehsana code
+              for (let index = 1; index <= 1; index++) {
+                const element1 = longi_mehsana + Math.random()/70;
+                const element2 = lati_mehsana +  Math.random()/70;
+                const temp = [element1,element2]
+                mehsana_cords.push(temp)
+              }
+              // morbi code
+              for (let index = 1; index <= 0; index++) {
+                const element1 = longi_morbi + Math.random()/70;
+                const element2 = lati_morbi +  Math.random()/70;
+                const temp = [element1,element2]
+                morbi_cords.push(temp)
+              }
+              // narmada code
+              for (let index = 1; index <= 0; index++) {
+                const element1 = longi_narmada + Math.random()/70;
+                const element2 = lati_narmada +  Math.random()/70;
+                const temp = [element1,element2]
+                narmada_cords.push(temp)
+              }
+              // navsari code
+              for (let index = 1; index <= 1; index++) {
+                const element1 = longi_navsari + Math.random()/70;
+                const element2 = lati_navsari +  Math.random()/70;
+                const temp = [element1,element2]
+                navsari_cords.push(temp)
+              }
+              // panchmahal code
+              for (let index = 1; index <= 1; index++) {
+                const element1 = longi_panchmahal + Math.random()/70;
+                const element2 = lati_panchmahal +  Math.random()/70;
+                const temp = [element1,element2]
+                panchmahal_cords.push(temp)
+              }
+              // patan code
+              for (let index = 1; index <= 1; index++) {
+                const element1 = longi_patan + Math.random()/70;
+                const element2 = lati_patan +  Math.random()/70;
+                const temp = [element1,element2]
+                patan_cords.push(temp)
+              }
+              // porbandar code
+              for (let index = 1; index <= 0; index++) {
+                const element1 = longi_porbandar + Math.random()/70;
+                const element2 = lati_porbandar +  Math.random()/70;
+                const temp = [element1,element2]
+                porbandar_cords.push(temp)
+              }
+              // rajkot code
+              for (let index = 1; index <= 3; index++) {
+                const element1 = longi_rajkot + Math.random()/70;
+                const element2 = lati_rajkot +  Math.random()/70;
+                const temp = [element1,element2]
+                rajkot_cords.push(temp)
+              }
+              // sabarkantha code
+              for (let index = 1; index <= 0; index++) {
+                const element1 = longi_sabarkantha + Math.random()/70;
+                const element2 = lati_sabarkantha +  Math.random()/70;
+                const temp = [element1,element2]
+                sabarkantha_cords.push(temp)
+              }
+              // surat code
+              for (let index = 1; index <= 2; index++) {
+                const element1 = longi_surat + Math.random()/70;
+                const element2 = lati_surat +  Math.random()/70;
+                const temp = [element1,element2]
+                surat_cords.push(temp)
+              }
+              // surendranagar code
+              for (let index = 1; index <= 0; index++) {
+                const element1 = longi_gandhinagar + Math.random();
+                const element2 = lati_gandhinagar +  Math.random();
+                const temp = [element1,element2]
+                surendranagar_cords.push(temp)
+              }
+              // tapi code
+              for (let index = 1; index <= 2; index++) {
+                const element1 = longi_tapi + Math.random()/70;
+                const element2 = lati_tapi +  Math.random()/70;
+                const temp = [element1,element2]
+                tapi_cords.push(temp)
+              }
+              // vadodara code
+              for (let index = 1; index <= 0; index++) {
+                const element1 = longi_vadodara + Math.random()/70;
+                const element2 = lati_vadodara +  Math.random()/70;
+                const temp = [element1,element2]
+                vadodara_cords.push(temp)
+              }
+              // valsad code
+              for (let index = 1; index <= 3; index++) {
+                const element1 = longi_valsad + Math.random()/70;
+                const element2 = lati_valsad +  Math.random()/70;
+                const temp = [element1,element2]
+                valsad_cords.push(temp)
+              }
+
+
+
+
+
+
+
+
+
+
+
+
+
+              console.log(gandhinagar_cords);
+              const allFeatures = new Array();
+
+
+              
+              ahemdabad_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              amreli_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              anand_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              aravalli_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              banaskantha_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              bharuch_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              bhavnagar_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              botad_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              chota_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              dahod_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              dang_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              dwarka_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              gandhinagar_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              gir_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              jamnagar_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              junagadh_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              kutch_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              kheda_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              mahisagar_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              mehsana_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              morbi_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              narmada_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              navsari_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              panchmahal_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              patan_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              porbandar_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              rajkot_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              sabarkantha_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              surat_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              surendranagar_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              tapi_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              vadodara_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+              valsad_cords.map((cord) => {
+                const tempObject = { "type": "Feature", "properties": { "id": "ak16994521", "mag": 2.3, "time": 1507425650893, "felt": null, "tsunami": 0 }, "geometry": { "type": "Point", "coordinates": cord } }
+                allFeatures.push(tempObject)
+              })
+
+
+
+
+
+              console.log(allFeatures)
+              map.addSource("earthquakes", {
+                type: "geojson",
+                // Point to GeoJSON data. This example visualizes all M1.0+ earthquakes
+                // from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
+                data: {
+      "type": "FeatureCollection",
+      "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+      "features": allFeatures},
+                cluster: true,
+                clusterMaxZoom: 14, // Max zoom to cluster points on
+                clusterRadius: 50, // Radius of each cluster when clustering points (defaults to 50)
+              });
+
+              map.addLayer({
+                id: "clusters",
+                type: "circle",
+                source: "earthquakes",
+                filter: ["has", "point_count"],
+                paint: {
+                  // Use step expressions (https://maplibre.org/maplibre-gl-js-docs/style-spec/#expressions-step)
+                  // with three steps to implement three types of circles:
+                  //   * Blue, 20px circles when point count is less than 100
+                  //   * Yellow, 30px circles when point count is between 100 and 750
+                  //   * Pink, 40px circles when point count is greater than or equal to 750
+                  "circle-color": [
+                    "step",
+                    ["get", "point_count"],
+                    "#33ff33",
+                    10,
+                    "#FFD384",
+                    25,                    
+                    "#ff751a",
+                    
+                  ],
+                  "circle-radius": [
+                    "step",
+                    ["get", "point_count"],
+                    20,
+                    100,
+                    30,
+                    750,
+                    40,
+                  ],
+                },
+              });
+
+              map.addLayer({
+                id: "cluster-count",
+                type: "symbol",
+                source: "earthquakes",
+                filter: ["has", "point_count"],
+                layout: {
+                  "text-field": "{point_count_abbreviated}",
+                  "text-font": ["DIN Offc Pro Medium", "Arial Unicode MS Bold"],
+                  "text-size": 12,
+                },
+              });
+
+              map.addLayer({
+                id: "unclustered-point",
+                type: "circle",
+                source: "earthquakes",
+                filter: ["!", ["has", "point_count"]],
+                paint: {
+                  "circle-color": "#00ffff",
+                  "circle-radius": 4,
+                  "circle-stroke-width": 1,
+                  "circle-stroke-color": "#000",
+                },
+              });
+
+              // inspect a cluster on click
+              map.on("click", "clusters", function (e) {
+                var features = map.queryRenderedFeatures(e.point, {
+                  layers: ["clusters"],
+                });
+                var clusterId = features[0].properties.cluster_id;
+                map
+                  .getSource("earthquakes")
+                  .getClusterExpansionZoom(clusterId, function (err, zoom) {
+                    if (err) return;
+
+                    map.easeTo({
+                      center: features[0].geometry.coordinates,
+                      zoom: zoom,
+                    });
+                  });
+              });
+
+              // When a click event occurs on a feature in
+              // the unclustered-point layer, open a popup at
+              // the location of the feature, with
+              // description HTML from its properties.
+              map.on("click", "unclustered-point", function (e) {
+                var coordinates = e.features[0].geometry.coordinates.slice();
+                var mag = e.features[0].properties.mag;
+                var tsunami;
+
+                if (e.features[0].properties.tsunami === 1) {
+                  tsunami = "yes";
+                } else {
+                  tsunami = "no";
+                }
+
+                // Ensure that if the map is zoomed out such that
+                // multiple copies of the feature are visible, the
+                // popup appears over the copy being pointed to.
+                while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                  coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                }
+
+                new maplibregl.Popup()
+                  .setLngLat(coordinates)
+                  .setHTML(
+                    "magnitude: " + mag + "<br>Was there a tsunami?: " + tsunami
+                  )
+                  .addTo(map);
+              });
+
+              map.on("mouseenter", "clusters", function () {
+                map.getCanvas().style.cursor = "pointer";
+              });
+              map.on("mouseleave", "clusters", function () {
+                map.getCanvas().style.cursor = "";
+              });
+            });
+    </script>
+  </body>
+</html>

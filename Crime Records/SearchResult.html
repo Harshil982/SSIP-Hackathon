@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crime Records</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./../css/style.css" />
+    <link rel="stylesheet" href="./../css/CrimeRecord.css" />
+    <link rel="stylesheet" href="./../Admin/Crime Records/css/Footer.css" />
+    <link rel="shortcut icon" href="./../Images/Images/fav.png" type="image/x-icon">
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav>
+        <div class="logo custom-margin">
+            <i class="bx bx-menu menu-icon"></i>
+            <span class="logo-name">CrimeRecords</span>
+        </div>
+
+        <div class="sidebar">
+            <div class="logo">
+                <i class="bx bx-menu menu-icon"></i>
+                <span class="logo-name">SSIP</span>
+            </div>
+
+            <div class="sidebar-content">
+                <ul class="lists">
+                    <li class="list">
+                        <a href="./../Analytics.html" class="nav-link">
+                            <i class="bx bx-pie-chart-alt-2 icon"></i>
+                            <span class="link">Analytics</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="#" class="nav-link nav-link-active">
+                            <ion-icon name="book-outline" class="icon icon-active"></ion-icon>
+                            <span class="link icon-active">Crime Records</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="./../Trends/Trends.html" class="nav-link">
+                            <ion-icon name="analytics-outline" class="icon"></ion-icon>
+                            <span class="link">Trends</span>
+                        </a>
+                    </li>
+                    <li class="list">
+                        <a href="./../Suggestion/Suggestions.html" class="nav-link">
+                            <i class="bx bx-message-rounded icon"></i>
+                            <span class="link">Suggestions</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="bottom-cotent">
+                    <li class="list">
+                        <a href="#" class="nav-link">
+                            <i class="bx bx-log-out icon"></i>
+                            <span class="link">Logout</span>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="overlay"></section>
+
+    <!-- Crime Records Starts -->
+    <div class="search-container settle-top">
+        <div class="search-input-container">
+            <input type="text" name="" id="" placeholder="Search Crime Record">
+        </div>
+        <button class="search-btn" title="Search">
+            <ion-icon name="search-outline" class="search-icon"></ion-icon>
+        </button>
+        <!-- <button class="filter-btn" title="Filter" >
+        Filter
+      </button> -->
+    </div>
+
+    <!-- Filter Option Starts -->
+    <div class="all-filter-container">
+        <div class="Year-Filter filter">
+            <p>Select Year</p>
+            <select class="form-select form-select-sm" aria-label="Default select example">
+                <option value="All" selected>All</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+            </select>
+        </div>
+        <div class="Crime-Filter filter">
+            <p>Select Crime Type</p>
+            <select class="form-select" aria-label="Default select example">
+                <option value="All" selected>All</option>
+                <option value="Murder">Murder</option>
+                <option value="Rape">Rape</option>
+                <option value="Acid Attack">Acid Attack</option>
+                <option value="Domestic Violence">Domestic Violence</option>
+                <option value="Dowry Deaths">Dowry Deaths</option>
+                <option value="Kidnapping">Kidnapping</option>
+                <option value="Immoral Trafficking">Immoral Trafficking</option>
+                <option value="Assault on Women">Assault on Women</option>
+                <option value="Sucide">Sucide</option>
+                <option value="Cyber Crime">Cyber Crime</option>
+            </select>
+        </div>
+        <div class="Crime-Filter filter">
+            <p>Select District</p>
+            <select id="ddl" class="form-select" aria-label="Default select example"
+                onchange="configureDropDownLists(this,document.getElementById('ddl2'))">
+                <option value="All" selected>All</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Amreli">Amreli</option>
+                <option value="Anand">Anand</option>
+                <option value="Aravalli">Aravalli</option>
+                <option value="Banaskantha">Banaskantha</option>
+                <option value="Bharuch">Bharuch</option>
+                <option value="Bhavnagar">Bhavnagar</option>
+                <option value="Botad">Botad</option>
+                <option value="Chhota Udepur">Chhota Udepur</option>
+                <option value="Dahod">Dahod</option>
+                <option value="Dang">Dang</option>
+                <option value="DevBhoomi Dwarka">DevBhoomi Dwarka</option>
+                <option value="Gandhinagar">Gandhinagar</option>
+                <option value="Gir Somnath">Gir Somnath</option>
+                <option value="Jamnagar">Jamnagar</option>
+                <option value="Junagadh">Junagadh</option>
+                <option value="Kutch">Kutch</option>
+                <option value="Kheda">Kheda</option>
+                <option value="Mahisagar">Mahisagar</option>
+                <option value="Mehsana">Mehsana</option>
+                <option value="Morbi">Morbi</option>
+                <option value="Narmada">Narmada</option>
+                <option value="Navsari">Navsari</option>
+                <option value="Panchmahal">Panchmahal</option>
+                <option value="Patan">Patan</option>
+                <option value="Porbandar">Porbandar</option>
+                <option value="Rajkot">Rajkot</option>
+                <option value="Sabarkantha">Sabarkantha</option>
+                <option value="Surat">Surat</option>
+                <option value="Surendranagar">Surendranagar</option>
+                <option value="Tapi">Tapi</option>
+                <option value="Vadodara">Vadodara</option>
+                <option value="Valsad">Valsad</option>
+            </select>
+        </div>
+        <div class="Taluka-Filter filter">
+            <p>Select Taluka</p>
+            <select class="form-select" id="ddl2">
+                <option value="All" selected>All</option>
+            </select>
+        </div>
+        <div class="Crime-Filter filter">
+            <p>Select Age-Group</p>
+            <select class="form-select" aria-label="Default select example">
+                <option value="All" selected>All</option>
+                <option value="18-25">0-18</option>
+                <option value="18-25">18-25</option>
+                <option value="25-35">25-35</option>
+                <option value="35-45">35-45</option>
+                <option value="45-55">45-55</option>
+                <option value="55-65">55-65</option>
+                <option value="65 & above">65 & above</option>
+            </select>
+        </div>
+        <button class="apply-filter">Apply</button>
+    </div>
+    <!-- Filter Option Ends -->
+    <table class="table my-table">
+        <thead class="head-dark head">
+            <tr>
+                <th scope="col">Sr no.</th>
+                <th scope="col">FIR ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Crime Type</th>
+                <th scope="col">Age</th>
+                <th scope="col">Gender</th>
+                <th scope="col">District</th>
+                <th scope="col">Taluka</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+            <tr>
+                <th scope="row">1</th>
+                <td>01</td>
+                <td>Patel Khushi Harpreetbhai</td>
+                <td>Rape</td>
+                <td>20</td>
+                <td>Female</td>
+                <td>Surat</td>
+                <td>Surat</td>
+            </tr>
+        </tbody>
+    </table>
+    <footer id="footer">
+        <div class="rowww">
+            <div class="col">
+                <div class="logos-cont">
+                    <img src="./../Images/Images/fav.png" class="logo" alt="logo">
+                    <img src="./../Images/Images/azadi-final.png" class="logo" alt="logo">
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum adipisci similique id nam omnis error
+                    odit
+                    iste nesciunt.</p>
+            </div>
+            <div class="col">
+                <h3>Office</h3>
+                <p>Sardar Bhavan</p>
+                <p>Block 9 ,6th floor, Sector-10 </p>
+                <p>Gandhinagar, Gujarat, 382010</p>
+                <p class="email-id">pa2sec-wncw@gujarat.gov.in</p>
+                <h4>079 2325 7942</h4>
+            </div>
+            <div class="col">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href=""><i
+                                class="bx bx-pie-chart-alt-2 icon icon-active footer-icon"></i>&nbsp;&nbsp;Analytics</a>
+                    </li>
+                    <li><a href="">
+                            <ion-icon name="book-outline" class="icon"></ion-icon>&nbsp;&nbsp;Crime Records
+                        </a></li>
+                    <li><a href="">
+                            <ion-icon name="analytics-outline" class="icon"></ion-icon>&nbsp;&nbsp;Trends
+                        </a></li>
+                    <li><a href=""><i class="bx bx-message-rounded icon"></i>&nbsp;&nbsp;Suggestions</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>Scan QR</h3>
+                <img src="./../Admin/Images/Images/final_Qr.png" class="login-qr" alt="">
+                <!-- <div class="social-media-icons">
+          <ion-icon name="logo-facebook" class="sMedia"></ion-icon>
+          <ion-icon name="logo-whatsapp" class="sMedia"></ion-icon>
+          <ion-icon name="logo-instagram" class="sMedia"></ion-icon>
+          <ion-icon name="logo-twitter" class="sMedia"></ion-icon>
+        </div> -->
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Team Sentinals &#169; 2022 - All Rights Reserved</p>
+    </footer>
+    <!-- Footer Ends -->
+    <!-- Custom row -->
+    <!-- Crime Records Ends -->
+
+    <script>
+        const navBar = document.querySelector("nav"),
+            menuBtns = document.querySelectorAll(".menu-icon"),
+            overlay = document.querySelector(".overlay");
+
+        menuBtns.forEach((menuBtn) => {
+            menuBtn.addEventListener("click", () => {
+                navBar.classList.toggle("open");
+            });
+        });
+
+        overlay.addEventListener("click", () => {
+            navBar.classList.remove("open");
+        });
+
+        const Talukas = {
+            Ahmedabad: ["Ahmedabad 1", "Ahmedabad 2"],
+            Aravalli: ["Malpur", "Modasa", "Dhansura"],
+        }
+
+        console.log(Talukas["Ahmedabad"])
+
+        // Change options Dropdown
+        function configureDropDownLists(ddl1, ddl2) {
+            var Ahmedabad = ['All','City East', 'City West', 'Bavla', 'Daskroi', 'Detroj-Rampura', 'Dhandhuka', 'Dholera', 'Mandal', 'Sanand', 'Viramgam'];
+            var Amreli = ['All','Amreli', 'Babra', 'Bagasara', 'Dhari', 'Jafrabad', 'Khambha', 'Kunkavav Vadi', 'Lathi', 'Lilia', 'Rajula', 'Savarkundala'];
+            var Anand = ['All','Anand', 'Anklav', 'Borsad', 'Khambha', 'Petlad', 'Sojitra', 'Tarapur', 'Umreth'];
+            var Aravalli = ['All','Bayad', 'Bhiloda' ,'Dhansura','Malpur', 'Meghraj',  'Modasa' ];
+            var Banaskantha = ['All','Amirgadh', 'Bhabhar' ,'Danta','Dantiwada', 'Deesa',  'Deodar', 'Dhanera', 'Kankreja', 'Lakhani', 'Palanpur', 'Suigam' , 'Tharad' ,'Vadgam', 'Vav' ];
+            var Bharuch = ['All','Bharuch', 'Amod' ,'Ankleshwar','Hansot', 'Jambusar',  'Jhagadia', 'Netrang', 'Vagra', 'valia' ];
+            var Bhavnagar = ['All','Bhavnagar', 'Gariadhar' ,'Ghogha','Jesar', 'Mahuva',  'Palitana', 'Sihor', 'Talaja', 'Umarala', 'Vallabhipur' ];
+            var Botad = ['All','Botad', 'Barawala' ,'Gadhada','Ranpur'];
+            var ChhotaUdepur = ['All','Chhota Udepur', 'Bodeli' ,'Jetpur Pavi','Kavant', 'Nasvadi',  'Sankheda' ];
+            var Dahod = ['All','Dahod', 'Devgadh Kari' ,'Dhanpur','Fatepur', 'Garbada',  'Limkheda', 'Sanjeli', 'Jhalod', 'Singvada' ];
+            var Dang = ['All','Ahwa', 'Subir' ,'Waghai'];
+            var DevBhoomiDwarka = ['All','Bhanvad', 'Kalyanpur' ,'Khambhalia','Okhamandal'];
+            var Gandhinagar = ['All','Gandhinagar', 'Dahegam' ,'Kalol','Mansa'];
+            var GirSomnath = ['All','Gir-Gadhada', 'Kodinar' ,'Satrupada','Talala', 'Una',  'Patan-Veraval' ];
+            var Jamnagar = ['All','Jamnagar', 'Dharol' ,'Jamjodhpur','Jodiya', 'Kalvad',  'Lalpur' ];
+            var Junagadh = ['All','Junagadh City', 'Bhesana' ,'Junagadh Rural','Keshod', 'Malia',  'Manavadar', 'Mangrol', 'Mendara', 'Vanthali', 'Visavadar' ];
+            var Kutch = ['All','Abdasa', 'Anjar' ,'Bhachau','Bhuj', 'Gandhidham',  'Lakhpat', 'Mandvi', 'Mudra', 'Nakhtrana', 'Rapar' ];
+            var Kheda = ['All','Kheda', 'Galteshwar', 'Kapdvanj', 'Kathlal', 'Madhuma', 'Matar', 'Mehmedabad', 'Nadiad', 'Thasra', 'Vaso'];
+            var Mahisagar = ['All','Balasinor', 'Kadana', 'Khanpur', 'Lunawada', 'Santrampur', 'Virpur'];
+            var Mehsana = ['All','Mehsana', 'Becharaji', 'Jonata', 'Kadi', 'Kheralu', 'Gojariya', 'Santlasana', 'Unjha', 'Vadnagar', 'Vijapur', 'Visnagar'];
+            var Morbi = ['All','Halvad', 'Maliya', 'Morbi', 'Tankara', 'Wanakaner'];
+            var Narmada = ['All','Dediapada', 'Garudeshwar', 'Nandod', 'Sagbara', 'Tilakwada'];
+            var Navsari = ['All','Navsari', 'Vansda', 'Chikhli', 'Gandevi', 'Jalalpore', 'Khergam'];
+            var Panchmahal = ['All','Ghoghamba', 'Godhra', 'Halol', 'Jambughoda', 'Kalol', 'Morwa Hadaf', 'Shehera'];
+            var Patan = ['All','Patan', 'Chanasama', 'Harji', 'Randhanpur', 'Sami', 'Sankheshwar', 'Santalpur', 'Sarasvati', 'Sidhpur'];
+            var Porbandar = ['All','Porbandar', 'Kutiyana', 'Ranavav'];
+            var Rajkot = ['All','Rajkot', 'Dhoraji', 'Gondal', 'Jamkandorna', 'Jasdan', 'Jetpur', 'Kotda-Sangani', 'Lodhika', 'Paddhari', 'Upleta', 'Vinchchiya'];
+            var Sabarkantha = ['All','Himatnagar', 'Idar', 'Khedbrahma', 'Poshina', 'Prantij', 'Talod', 'Vadali', 'Vijaynagar'];
+            var Surat = ['All','Surat', 'Bardoli', 'Choryasi', 'Kamrej', 'Mahuva', 'Mandvi', 'Mangrol', 'Olpad', 'Palsana', 'Umarpada'];
+            var Surendranagar = ['All','Chotila', 'Chuda', 'Dasada', 'Dhragandhra', 'Lakhtar', 'Limbdi', 'Muli', 'Sayla', 'Thangadh', 'Wandhwan'];
+            var Tapi = ['All','Nizar', 'Songadh', 'Uchhal', 'Valod', 'Vyara', 'Kukarmunda', 'Dolvan'];
+            var Vadodara = ['All','Vadodara', 'Dabhoi', 'Desar', 'Karjan', 'Padra', 'Savli', 'Sinor', 'Vaghodia'];
+            var Valsad = ['All','Valsad', 'Dharampur', 'Kaprada', 'Pardi', 'Umbergaon', 'Vapi'];
+
+            switch (ddl1.value) {
+                case 'Ahmedabad':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Ahmedabad.length; i++) {
+                        createOption(ddl2, Ahmedabad[i], Ahmedabad[i]);
+                    }
+                    break;
+                    case 'Amreli':
+                        ddl2.options.length = 0;
+                        for (i = 0; i < Amreli.length; i++) {
+                            createOption(ddl2, Amreli[i], Amreli[i]);
+                        }
+                        break;
+                case 'Anand':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Anand.length; i++) {
+                        createOption(ddl2, Anand[i], Anand[i]);
+                    }
+                    break;
+                case 'Aravalli':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Aravalli.length; i++) {
+                        createOption(ddl2, Aravalli[i], Aravalli[i]);
+                    }
+                    break;
+                case 'Banaskantha':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Banaskantha.length; i++) {
+                        createOption(ddl2, Banaskantha[i], Banaskantha[i]);
+                    }
+                    break;
+                case 'Bharuch':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Bharuch.length; i++) {
+                        createOption(ddl2, Bharuch[i], Bharuch[i]);
+                    }
+                    break;
+                case 'Bhavnagar':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Bhavnagar.length; i++) {
+                        createOption(ddl2, Bhavnagar[i], Bhavnagar[i]);
+                    }
+                    break;
+                case 'Botad':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Botad.length; i++) {
+                        createOption(ddl2, Botad[i], Botad[i]);
+                    }
+                    break;
+                case 'Chhota Udepur':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < ChhotaUdepur.length; i++) {
+                        createOption(ddl2, ChhotaUdepur[i], ChhotaUdepur[i]);
+                    }
+                    break;
+                case 'Dahod':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Dahod.length; i++) {
+                        createOption(ddl2, Dahod[i], Dahod[i]);
+                    }
+                    break;
+                case 'Dang':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Dang.length; i++) {
+                        createOption(ddl2, Dang[i], Dang[i]);
+                    }
+                    break;
+                case 'DevBhoomi Dwarka':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < DevBhoomiDwarka.length; i++) {
+                        createOption(ddl2, DevBhoomiDwarka[i], DevBhoomiDwarka[i]);
+                    }
+                    break;
+                case 'Gandhinagar':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Gandhinagar.length; i++) {
+                        createOption(ddl2, Gandhinagar[i], Gandhinagar[i]);
+                    }
+                    break;
+                case 'Gir Somnath':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < GirSomnath.length; i++) {
+                        createOption(ddl2, GirSomnath[i], GirSomnath[i]);
+                    }
+                    break;
+                case 'Jamnagar':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Jamnagar.length; i++) {
+                        createOption(ddl2, Jamnagar[i], Jamnagar[i]);
+                    }
+                    break;
+                case 'Junagadh':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Junagadh.length; i++) {
+                        createOption(ddl2, Junagadh[i], Junagadh[i]);
+                    }
+                    break;
+                case 'Kutch':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Kutch.length; i++) {
+                        createOption(ddl2, Kutch[i], Kutch[i]);
+                    }
+                    break;
+                case 'Kheda':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Kheda.length; i++) {
+                        createOption(ddl2, Kheda[i], Kheda[i]);
+                    }
+                    break;
+                case 'Mahisagar':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Mahisagar.length; i++) {
+                        createOption(ddl2, Mahisagar[i], Mahisagar[i]);
+                    }
+                    break;
+                case 'Mehsana':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Mehsana.length; i++) {
+                        createOption(ddl2, Mehsana[i], Mehsana[i]);
+                    }
+                    break;
+                case 'Morbi':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Morbi.length; i++) {
+                        createOption(ddl2, Morbi[i], Morbi[i]);
+                    }
+                    break;
+                case 'Narmada':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Narmada.length; i++) {
+                        createOption(ddl2, Narmada[i], Narmada[i]);
+                    }
+                    break;
+                case 'Navsari':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Navsari.length; i++) {
+                        createOption(ddl2, Navsari[i], Navsari[i]);
+                    }
+                    break;
+                case 'Panchmahal':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Panchmahal.length; i++) {
+                        createOption(ddl2, Panchmahal[i], Panchmahal[i]);
+                    }
+                    break;
+                case 'Patan':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Patan.length; i++) {
+                        createOption(ddl2, Patan[i], Patan[i]);
+                    }
+                    break;
+                case 'Porbandar':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Porbandar.length; i++) {
+                        createOption(ddl2, Porbandar[i], Porbandar[i]);
+                    }
+                    break;
+                case 'Rajkot':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Rajkot.length; i++) {
+                        createOption(ddl2, Rajkot[i], Rajkot[i]);
+                    }
+                    break;
+                case 'Sabarkantha':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Sabarkantha.length; i++) {
+                        createOption(ddl2, Sabarkantha[i], Sabarkantha[i]);
+                    }
+                    break;
+                case 'Surat':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Surat.length; i++) {
+                        createOption(ddl2, Surat[i], Surat[i]);
+                    }
+                    break;
+                case 'Surendranagar':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Surendranagar.length; i++) {
+                        createOption(ddl2, Surendranagar[i], Surendranagar[i]);
+                    }
+                    break;
+                case 'Tapi':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Tapi.length; i++) {
+                        createOption(ddl2, Tapi[i], Tapi[i]);
+                    }
+                    break;
+                case 'Vadodara':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Vadodara.length; i++) {
+                        createOption(ddl2, Vadodara[i], Vadodara[i]);
+                    }
+                    break;
+                case 'Valsad':
+                    ddl2.options.length = 0;
+                    for (i = 0; i < Valsad.length; i++) {
+                        createOption(ddl2, Valsad[i], Valsad[i]);
+                    }
+                    break;
+                default:
+                    ddl2.options.length = 0;
+                    break;
+            }
+
+        }
+
+        function createOption(ddl, text, value) {
+            var opt = document.createElement('option');
+            opt.value = value;
+            opt.text = text;
+            ddl.options.add(opt);
+        }
+
+    </script>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>
